@@ -1,0 +1,1337 @@
+
+<!DOCTYPE html>
+
+<html lang="po">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estrutura Avançada para Análise de Dados &#8212; The Turing Way</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="po">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-167881009-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">The Turing Way</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../welcome.html">
+   Boas-vindas
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../reproducible-research/reproducible-research.html">
+   Guia de Pesquisa Reprodutível
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/vcs.html">
+     Version Control
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-workflow.html">
+       General Workflow
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-git.html">
+       Getting Started with Git
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-git-commit.html">
+       Git Commit Command
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-git-compare.html">
+       Retrieving and Comparing Versions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-git-branches.html">
+       Git Branches
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-git-merge.html">
+       Merging Branches in Git
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-git-interactive.html">
+       Interactive, Visual Git
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-github.html">
+       Git Commands to Work on GitHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-git-summary.html">
+       Summary Table of Git Commands
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-data.html">
+       Version Control for Data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-personal-stories.html">
+       Personal Stories
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-checklist.html">
+       Checklist
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-resources.html">
+       Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/licensing.html">
+     Licensing
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/licensing/licensing-compatibility.html">
+       License Compatibililty
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/licensing/licensing-checklist.html">
+       Checklist
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/rdm.html">
+     Research Data Management
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-data.html">
+       Research Data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-fair.html">
+       The FAIR Principles and Practices
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-storage.html">
+       Data Storage and Organisation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-spreadsheets.html">
+       Data Organisation in Spreadsheets
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-toolkits.html">
+       Research Data Management Toolkits
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-stories.html">
+       Personal Impact Stories
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-checklist.html">
+       Checklist
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-resources.html">
+       Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/renv.html">
+     Reproducible Environments
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/renv/renv-options.html">
+       Capturing Computational Environments
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/renv/renv-package.html">
+       Package Management Systems
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/renv/renv-yaml.html">
+       YAML
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/renv/renv-resources.html">
+       Resources and Checklist
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/binderhub.html">
+     BinderHub
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/binderhub/binderhub-introduction.html">
+       Introduction to BinderHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/binderhub/binderhub-compute.html">
+       Compute Resources
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/binderhub/binderhub-build.html">
+       Build Your Own BinderHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/binderhub/binderhub-resources.html">
+       Resources for BinderHub
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/reviewing.html">
+     Code Reviewing Process
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/reviewing/reviewing-motivation.html">
+       Motivation for code reviewing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/reviewing/reviewing-recommend.html">
+       Recommendations for code reviewing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/reviewing/reviewing-workflow.html">
+       Code review workflow
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/reviewing/reviewing-resources.html">
+       Resources for code reviewing
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/code-reuse.html">
+     Reusable Code
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/code-reuse/code-reuse-overview.html">
+       Overview of Code Reuse
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/code-reuse/code-reuse-details.html">
+       Detailed Recommendations for Code Reuse
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/ci.html">
+     Continuous Integration (CI)
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/ci/ci-options.html">
+       Intro to Continuous integration (CI)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/ci/ci-building-gh-actions.html">
+       Building a Block of a GitHub actions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/ci/ci-practices.html">
+       Best practices and recommendations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/ci/ci-resources.html">
+       Checklist and Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/make.html">
+     Reproducible Research with Make
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/make/make-examples.html">
+       Learn "Make" by examples
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/make/make-debugging.html">
+       Debugging Makefiles
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/make/make-results.html">
+       Including numerical results and tables
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/make/make-resources.html">
+       Resources for "Make"
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/make/make-appendix.html">
+       Appendix
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reproducible-research/compendia.html">
+     Research Compendia
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/risk-assess.html">
+     Risk Assessment
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/risk-assess/risk-assess-impact.html">
+       Complexity and Impact of Risk Assessment
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/risk-assess/risk-assess-resources.html">
+       Summary of Risk Assessment
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/case-studies.html">
+     Case Studies
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../collaboration/collaboration.html">
+   Guia para colaboração
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/github-novice.html">
+     Getting Started With GitHub
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/github-novice/github-novice-firststeps.html">
+       First steps on GitHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/github-novice/github-novice-features.html">
+       Using more GitHub features
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/github-novice/github-novice-advanced.html">
+       Advanced GitHub features
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/maintain-review.html">
+     Maintainers and Reviewers on GitHub
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+    <label for="toctree-checkbox-15">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-maintenance.html">
+       Project Maintenance
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-permissions.html">
+       Ownership and Permissions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-review.html">
+       Reviewing Contributions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-merge.html">
+       Merging Contributions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-resources.html">
+       Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/new-community.html">
+     Managing a New Community and Team
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-guide.html">
+       Guide to Planning a Community
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-techissues.html">
+       Addressing Technical Issues
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-differences.html">
+       Valuing Diversity and Differences
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-teamwork.html">
+       Teamwork
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/leadership.html">
+     Leadership in Data Science
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+    <label for="toctree-checkbox-17">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/leadership/leadership-stories.html">
+       Personal Stories of Leadership
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/remote-collab.html">
+     Remote Collaboration
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+    <label for="toctree-checkbox-18">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-meetings.html">
+       Organising Remote Meetings
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-guidelines.html">
+       Guidelines for Remote Collaboration
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-tools.html">
+       Tools for Remote Collaboration
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-conferences.html">
+       Organising Remote Conferences
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-chairs.html">
+       Chairing Remote Events
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-participation.html">
+       Participating in Remote Events
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-management.html">
+       Managing Distributed Teams
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-informal.html">
+       Informal Coffee Chats
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-prosandcons.html">
+       Perceived Pros and Cons
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/shared-ownership.html">
+     Shared Ownership in Open Source Projects
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+    <label for="toctree-checkbox-19">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-projects.html">
+       Project Ownership
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-models.html">
+       Shared Ownership Models
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-challenges.html">
+       Challenges with Applying Ownership Models Retroactively
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-defaults.html">
+       Nudging for a Better Default
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../ethical-research/ethical-research.html">
+   Guia de Pesquisa Ética
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ethical-research/preclinical-research.html">
+     Ethical Decisions in Preclinical Research
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../ethical-research/law-policy.html">
+     Law, Policy and Human Rights in Ethics
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+    <label for="toctree-checkbox-21">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/law-policy/law-policy-ethics.html">
+       Ethics and law
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/law-policy/law-policy-rights.html">
+       Human rights
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/law-policy/law-policy-resources.html">
+       Further Recommendations
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../ethical-research/activism.html">
+     Activism for Researchers
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+    <label for="toctree-checkbox-22">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/activism/activism-unionisation.html">
+       Unionisation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/activism/activism-whistleblowing.html">
+       Whistleblowing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/activism/activism-robodebt.html">
+       Case study - Robodebt
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/activism/activism-case-study-google.html">
+       Case study - Google Workers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ethical-research/internal-policy.html">
+     Internal Policy Advocacy
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../community-handbook/community-handbook.html">
+   Manual da Comunidade
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+  <label for="toctree-checkbox-23">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/coc.html">
+     Code of Conduct
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+    <label for="toctree-checkbox-24">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-details.html">
+       Code of Conduct in Detail
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-reporting.html">
+       Incident Reporting Guideline
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-enforcement.html">
+       Enforcement Manual
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-acknowledgement.html">
+       Acknowledgements
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/contributing.html">
+     Contributing and Developing Chapters - Templates and Workflow
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
+    <label for="toctree-checkbox-25">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/contributing/contributing-templates.html">
+       Templates
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/acknowledgement.html">
+     Acknowledging Contributors
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/>
+    <label for="toctree-checkbox-26">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/acknowledgement/acknowledgement-members.html">
+       Community Members and Shared Ownership
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/acknowledgement/acknowledgement-record.html">
+       Record of Contributions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/coworking.html">
+     Community Coworking Calls
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/>
+    <label for="toctree-checkbox-27">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coworking/coworking-motivation.html">
+       Background, Motivations, and Techniques
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coworking/coworking-weekly.html">
+       Weekly Coworking Calls
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coworking/coworking-organisation.html">
+       Organising coworking calls
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Visit our <a href="https://github.com/alan-turing-institute/the-turing-way">GitHub Repository</a> <div>This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a></div>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/project-design/project-repo/project-repo-advanced.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nivel-de-habilidade-pre-requisitos-recomendados">
+   Nível de Habilidade Pré-requisitos/recomendados
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fundo">
+   Fundo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#principais-consideracoes">
+   Principais considerações
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#principais-recomendacoes">
+   Principais Recomendações
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exemplo-da-estrutura-do-repositorio">
+   Exemplo da estrutura do repositório
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemplo-para-um-projeto-de-pesquisa">
+     Exemplo para um projeto de pesquisa
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemplo-com-cada-possivel-pasta">
+     Exemplo com cada possível pasta
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recursos">
+   Recursos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pacotes-r-e-python">
+     Pacotes R e Python
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#format-0-curated-examples-of-github-repositories">
+     format@@0 Curated Examples of GitHub Repositories
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Estrutura Avançada para Análise de Dados</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nivel-de-habilidade-pre-requisitos-recomendados">
+   Nível de Habilidade Pré-requisitos/recomendados
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fundo">
+   Fundo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#principais-consideracoes">
+   Principais considerações
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#principais-recomendacoes">
+   Principais Recomendações
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exemplo-da-estrutura-do-repositorio">
+   Exemplo da estrutura do repositório
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemplo-para-um-projeto-de-pesquisa">
+     Exemplo para um projeto de pesquisa
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemplo-com-cada-possivel-pasta">
+     Exemplo com cada possível pasta
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recursos">
+   Recursos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pacotes-r-e-python">
+     Pacotes R e Python
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#format-0-curated-examples-of-github-repositories">
+     format@@0 Curated Examples of GitHub Repositories
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="estrutura-avancada-para-analise-de-dados">
+<h1>Estrutura Avançada para Análise de Dados<a class="headerlink" href="#estrutura-avancada-para-analise-de-dados" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="nivel-de-habilidade-pre-requisitos-recomendados">
+<h2>Nível de Habilidade Pré-requisitos/recomendados<a class="headerlink" href="#nivel-de-habilidade-pre-requisitos-recomendados" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Pré-requisito</p></th>
+<th class="head"><p>Importância</p></th>
+<th class="head"><p>Observações</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reproducible-research/vcs.html#rr-vcs"><span class="std std-ref">Controle de Versão</span></a></p></td>
+<td><p>Útil</p></td>
+<td><p>Conhecimento de usar o git para controle de versão</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="xref std std-ref">Pesquisa Aberta</span></p></td>
+<td><p>Útil</p></td>
+<td><p>Componentes são parte do compêndio</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../reproducible-research/renv.html#rr-renv"><span class="std std-ref">Ambientes Reproduíveis</span></a></p></td>
+<td><p>Útil</p></td>
+<td><p>Pode ser usado para tornar o compendium reprodutível</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Ao planejar um estudo de pesquisa, um componente crucial e muitas vezes esquecido é a configuração de um repositório. Nesta seção, serão delineados os benefícios e considerações de como projetar um repositório, junto com um exemplo de estrutura e recursos adicionais para guiar seu fluxo de trabalho.</p>
+<p>Os pré-requisitos para este capítulo podem variar consoante as necessidades organizacionais de um projeto. Criar um repositório com um simples layout de projeto de pesquisa pode exigir um conhecimento técnico mínimo (como gerenciar apenas dados de entrada e resultados de saída). Enquanto isso, podem ser necessários layouts avançados de repositório para projetos mais complicados (como projetos com dependências de outros projetos).</p>
+</div>
+<div class="section" id="fundo">
+<h2>Fundo<a class="headerlink" href="#fundo" title="Permalink to this headline">¶</a></h2>
+<p>Um repositório (ou um &quot;repositório&quot;) é um local de armazenamento para o seu projeto de pesquisa. Um repositório pode conter uma série de objetos digitais e pode ser usado para armazenar seu projeto usando plataformas online como o GitHub. O objetivo de um repositório é organizar seu projeto de tal forma que ele seja acessível para outros e eficiente de utilização.</p>
+<p>Até agora, vimos os principais documentos que se deve adicionar ao iniciar ou configurar um repositório de projeto. Se você estiver seguindo junto, seu projeto deve conter os seguintes arquivos:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Pasta do Projeto/
+── CODE_OF_CONDUCT          &lt;- Código de Conduta para projetos da comunidade
+── CONTRIBUTING             &lt;- Guia de contribuição para colaboradores
+─ LICENSE                  &lt;- licença de software
+── . . &lt;- quaisquer outros arquivos que você possa ter adicionado para o seu projeto
+─ LEIA-ME. d                &lt;- informações sobre o repositório
+</pre></div>
+</div>
+<p>Neste subcapítulo, descrevemos os benefícios e considerações de projetar um repositório, juntamente com um exemplo de estrutura e recursos adicionais para guiar seu fluxo de trabalho.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>O principal benefício de projetar seu repositório adicionando intencionalmente documentação, recursos e informações relevantes permitem criar uma infraestrutura para pesquisa ética, aberta e de alta qualidade na fase de busca.</p>
+</div>
+</div>
+<div class="section" id="principais-consideracoes">
+<h2>Principais considerações<a class="headerlink" href="#principais-consideracoes" title="Permalink to this headline">¶</a></h2>
+<p>Ao compartilhar seus recursos por meio do repositório, considere os seguintes aspectos da reprodutibilidade em sua pesquisa:</p>
+<ul class="simple">
+<li><p>Transparência e abertura</p></li>
+<li><p>Sistema de controle de versão (nenhum outro arquivo como final_v1_FINAL. R, final_v2_FINAL. R, ...)</p></li>
+<li><p>Faça com que seja fácil navegar para que você economize tempo para todos os envolvidos</p></li>
+<li><p>Considere <span class="xref std std-ref">aspectos pd-overview-repro</span></p></li>
+<li><p>Certifique-se de fornecer detalhes suficientes para que outros possam desenvolver o seu trabalho</p></li>
+</ul>
+</div>
+<div class="section" id="principais-recomendacoes">
+<h2>Principais Recomendações<a class="headerlink" href="#principais-recomendacoes" title="Permalink to this headline">¶</a></h2>
+<p>Sempre considere projetar seu projeto para colaboração adicionando documentos-chave que descrevam objetivos, visão, roteamento, contribuição e processo de comunicação conforme descrito em subcapítulos anteriores).</p>
+<ul class="simple">
+<li><p>Inclua detalhes no <span class="xref std std-ref">README arquivo</span>descrevendo <em>o que</em> o repositório é e <em>como</em> navegá-lo</p></li>
+<li><p>Forneça visão, objetivos e roteiro sempre que possível (veja <a class="reference external" href="https://github.com/kamranahmedse/developer-roadmap">o roteiro de desenvolvimento do Kamran Ahme</a> por exemplo)</p></li>
+<li><p>Estrutura geral deve separar entrada (dados), métodos (scripts) e saída (resultados, números, manuscritos)</p></li>
+<li><p>Especifique o que não deve ser rastreado no arquivo <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> , como arquivos confidenciais/privados, conjunto de dados grande ou notas pessoais</p></li>
+<li><p>Inclua informações em seu ambiente computacional <a class="reference internal" href="../../reproducible-research/renv.html#rr-renv"><span class="std std-ref">Ambientes Reproduíveis</span></a> para garantir a reprodutibilidade (isso também pode ser especificado no README)</p></li>
+</ul>
+</div>
+<div class="section" id="exemplo-da-estrutura-do-repositorio">
+<h2>Exemplo da estrutura do repositório<a class="headerlink" href="#exemplo-da-estrutura-do-repositorio" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exemplo-para-um-projeto-de-pesquisa">
+<h3>Exemplo para um projeto de pesquisa<a class="headerlink" href="#exemplo-para-um-projeto-de-pesquisa" title="Permalink to this headline">¶</a></h3>
+<p>Aqui estão a sugestão de arquivos e pastas que um projeto de pesquisa deve ter.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Pasta do Projeto/
+── docs                     &lt;- documentação
+─── codelist.txt 
+── project_plan.txt
+── ...
+├─── deliverables.txt
+── dados
+── raw/
+── my_data. sv
+── clean/
+── clean/
+named@@5─ data_clean. sv
+── analise                 &lt;- scripts
+── meu_script. ─── resultados                  &lt;- saída da análise     
+── figuras
+── . itignore               &lt;- arquivos excluídos do controle de versão do git 
+─ installing. &lt;- configuração de ambiente
+── CODE_OF_CONDUCT          &lt;- Código de Conduta para projetos da comunidade
+── CONTRIBUTING             &lt;- Guia de Contribuição para colaboradores
+── LICENSE                  &lt;- licença de software
+─ README. d                &lt;- informações sobre o relatório de repositório
+── . d                &lt;- relatório do projeto
+</pre></div>
+</div>
+</div>
+<div class="section" id="exemplo-com-cada-possivel-pasta">
+<h3>Exemplo com cada possível pasta<a class="headerlink" href="#exemplo-com-cada-possivel-pasta" title="Permalink to this headline">¶</a></h3>
+<p>Este exemplo mostra arquivos diferentes e diretório que um projeto pode conter ao criar um aplicativo de software ou ferramentas de engenharia de pesquisa.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sv
+├── limpo/
+── data_clean. sv
+── docs                     &lt;- documentação
+── codelist . xt 
+── gerenciamento de projeto       &lt;- documentos relacionados a gerenciamento de projetos
+── comunicação. d
+├── pessoas.md
+── project-report.md
+├── ferramentas. d
+── res                      &lt;- recursos estáticos (imagens e arquivos de áudio)
+── figuras
+── . itignore               &lt;- arquivos excluídos do controle de versão do git 
+── CODE_OF_CONDUCT          &lt;- Código de Conduta para projetos da comunidade
+─ CONTRIBUTING             &lt;- Guia de Contribuição para colaboradores
+─ lib                      &lt;- dependências (componentes compartilhados que podem ser usados através de um aplicativo ou em outros projetos. código que suporta a aplicação de núcleo)
+── logs. xt                 &lt;- histórico de todas as principais atualizações, como lançamentos de recursos, correção de erro, atualiza
+── exemplo                  &lt;- aplicação de exemplo de código
+── LICENSE                  &lt;- licença de software
+── ambiente. ml          &lt;- configuração de ambiente anaconda   
+─ instale. &lt;- Configuração de ambiente R
+require─ requisitos. xt         &lt;- configuração do ambiente python
+── runtime. xt              &lt;- R em configuração do binder
+── relatório. d                &lt;- relatório de análise
+─ README. d                &lt;- informações sobre o repo
+── src                      &lt;- arquivos de origem
+─ test                     &lt;- testes de unidade  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="recursos">
+<h2>Recursos<a class="headerlink" href="#recursos" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pacotes-r-e-python">
+<h3>Pacotes R e Python<a class="headerlink" href="#pacotes-r-e-python" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>R</p></th>
+<th class="head"><p>Python</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://annakrystalli.me/rrresearch/10_compendium.html">rrtools</a></p></td>
+<td><p><a class="reference external" href="https://pypi.org/project/compendium-dodo/">compendium-dodo</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/Pakillo/template">modelo</a></p></td>
+<td><p><a class="reference external" href="https://pypi.org/project/ccs-compendium/">css-compendium</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/FRBCesab/rcompendium">rcompendia</a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/richfitz/remake">refazer</a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="format-0-curated-examples-of-github-repositories">
+<h3>format&#64;&#64;0 Curated Examples of GitHub Repositories<a class="headerlink" href="#format-0-curated-examples-of-github-repositories" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/alan-turing-institute/the-turing-way"><em>O projeto Repo do Caminho de Turing</em></a></p></li>
+<li><p><a class="reference external" href="https://github.com/executablebooks/jupyter-book">Repositório de projeto Jupyter Book</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pandas-dev/pandas">Repositório do Pacote Pandas</a></p></li>
+<li><p><a class="reference external" href="https://github.com/atom/atom">Repositório do Editor de Texto Atom</a></p></li>
+</ul>
+<p>Para mais detalhes, siga o <span class="xref std std-ref">projeto-repo-recomendações-avançado</span>.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./project-design/project-repo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The Turing Way Community<br/>
+    
+        &copy; Copyright 2020-2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

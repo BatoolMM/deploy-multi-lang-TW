@@ -1,0 +1,1159 @@
+
+<!DOCTYPE html>
+
+<html lang="po">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste Unitário &#8212; The Turing Way</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="po">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-167881009-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">The Turing Way</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../welcome.html">
+   Boas-vindas
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../reproducible-research.html">
+   Guia de Pesquisa Reprodutível
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../vcs.html">
+     Version Control
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-workflow.html">
+       General Workflow
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-git.html">
+       Getting Started with Git
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-git-commit.html">
+       Git Commit Command
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-git-compare.html">
+       Retrieving and Comparing Versions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-git-branches.html">
+       Git Branches
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-git-merge.html">
+       Merging Branches in Git
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-git-interactive.html">
+       Interactive, Visual Git
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-github.html">
+       Git Commands to Work on GitHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-git-summary.html">
+       Summary Table of Git Commands
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-data.html">
+       Version Control for Data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-personal-stories.html">
+       Personal Stories
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-checklist.html">
+       Checklist
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-resources.html">
+       Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../licensing.html">
+     Licensing
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../licensing/licensing-compatibility.html">
+       License Compatibililty
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../licensing/licensing-checklist.html">
+       Checklist
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../rdm.html">
+     Research Data Management
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-data.html">
+       Research Data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-fair.html">
+       The FAIR Principles and Practices
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-storage.html">
+       Data Storage and Organisation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-spreadsheets.html">
+       Data Organisation in Spreadsheets
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-toolkits.html">
+       Research Data Management Toolkits
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-stories.html">
+       Personal Impact Stories
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-checklist.html">
+       Checklist
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-resources.html">
+       Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../renv.html">
+     Reproducible Environments
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../renv/renv-options.html">
+       Capturing Computational Environments
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../renv/renv-package.html">
+       Package Management Systems
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../renv/renv-yaml.html">
+       YAML
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../renv/renv-resources.html">
+       Resources and Checklist
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../binderhub.html">
+     BinderHub
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../binderhub/binderhub-introduction.html">
+       Introduction to BinderHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../binderhub/binderhub-compute.html">
+       Compute Resources
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../binderhub/binderhub-build.html">
+       Build Your Own BinderHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../binderhub/binderhub-resources.html">
+       Resources for BinderHub
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../reviewing.html">
+     Code Reviewing Process
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../reviewing/reviewing-motivation.html">
+       Motivation for code reviewing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../reviewing/reviewing-recommend.html">
+       Recommendations for code reviewing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../reviewing/reviewing-workflow.html">
+       Code review workflow
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../reviewing/reviewing-resources.html">
+       Resources for code reviewing
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../code-reuse.html">
+     Reusable Code
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code-reuse/code-reuse-overview.html">
+       Overview of Code Reuse
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code-reuse/code-reuse-details.html">
+       Detailed Recommendations for Code Reuse
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ci.html">
+     Continuous Integration (CI)
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ci/ci-options.html">
+       Intro to Continuous integration (CI)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ci/ci-building-gh-actions.html">
+       Building a Block of a GitHub actions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ci/ci-practices.html">
+       Best practices and recommendations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ci/ci-resources.html">
+       Checklist and Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../make.html">
+     Reproducible Research with Make
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../make/make-examples.html">
+       Learn "Make" by examples
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../make/make-debugging.html">
+       Debugging Makefiles
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../make/make-results.html">
+       Including numerical results and tables
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../make/make-resources.html">
+       Resources for "Make"
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../make/make-appendix.html">
+       Appendix
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../compendia.html">
+     Research Compendia
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../risk-assess.html">
+     Risk Assessment
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../risk-assess/risk-assess-impact.html">
+       Complexity and Impact of Risk Assessment
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../risk-assess/risk-assess-resources.html">
+       Summary of Risk Assessment
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../case-studies.html">
+     Case Studies
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../collaboration/collaboration.html">
+   Guia para colaboração
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/github-novice.html">
+     Getting Started With GitHub
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/github-novice/github-novice-firststeps.html">
+       First steps on GitHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/github-novice/github-novice-features.html">
+       Using more GitHub features
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/github-novice/github-novice-advanced.html">
+       Advanced GitHub features
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/maintain-review.html">
+     Maintainers and Reviewers on GitHub
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+    <label for="toctree-checkbox-15">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-maintenance.html">
+       Project Maintenance
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-permissions.html">
+       Ownership and Permissions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-review.html">
+       Reviewing Contributions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-merge.html">
+       Merging Contributions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-resources.html">
+       Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/new-community.html">
+     Managing a New Community and Team
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-guide.html">
+       Guide to Planning a Community
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-techissues.html">
+       Addressing Technical Issues
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-differences.html">
+       Valuing Diversity and Differences
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-teamwork.html">
+       Teamwork
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/leadership.html">
+     Leadership in Data Science
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+    <label for="toctree-checkbox-17">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/leadership/leadership-stories.html">
+       Personal Stories of Leadership
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/remote-collab.html">
+     Remote Collaboration
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+    <label for="toctree-checkbox-18">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-meetings.html">
+       Organising Remote Meetings
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-guidelines.html">
+       Guidelines for Remote Collaboration
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-tools.html">
+       Tools for Remote Collaboration
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-conferences.html">
+       Organising Remote Conferences
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-chairs.html">
+       Chairing Remote Events
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-participation.html">
+       Participating in Remote Events
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-management.html">
+       Managing Distributed Teams
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-informal.html">
+       Informal Coffee Chats
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-prosandcons.html">
+       Perceived Pros and Cons
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/shared-ownership.html">
+     Shared Ownership in Open Source Projects
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+    <label for="toctree-checkbox-19">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-projects.html">
+       Project Ownership
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-models.html">
+       Shared Ownership Models
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-challenges.html">
+       Challenges with Applying Ownership Models Retroactively
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-defaults.html">
+       Nudging for a Better Default
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../ethical-research/ethical-research.html">
+   Guia de Pesquisa Ética
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ethical-research/preclinical-research.html">
+     Ethical Decisions in Preclinical Research
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../ethical-research/law-policy.html">
+     Law, Policy and Human Rights in Ethics
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+    <label for="toctree-checkbox-21">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/law-policy/law-policy-ethics.html">
+       Ethics and law
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/law-policy/law-policy-rights.html">
+       Human rights
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/law-policy/law-policy-resources.html">
+       Further Recommendations
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../ethical-research/activism.html">
+     Activism for Researchers
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+    <label for="toctree-checkbox-22">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/activism/activism-unionisation.html">
+       Unionisation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/activism/activism-whistleblowing.html">
+       Whistleblowing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/activism/activism-robodebt.html">
+       Case study - Robodebt
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/activism/activism-case-study-google.html">
+       Case study - Google Workers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ethical-research/internal-policy.html">
+     Internal Policy Advocacy
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../community-handbook/community-handbook.html">
+   Manual da Comunidade
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+  <label for="toctree-checkbox-23">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/coc.html">
+     Code of Conduct
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+    <label for="toctree-checkbox-24">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-details.html">
+       Code of Conduct in Detail
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-reporting.html">
+       Incident Reporting Guideline
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-enforcement.html">
+       Enforcement Manual
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-acknowledgement.html">
+       Acknowledgements
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/contributing.html">
+     Contributing and Developing Chapters - Templates and Workflow
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
+    <label for="toctree-checkbox-25">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/contributing/contributing-templates.html">
+       Templates
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/acknowledgement.html">
+     Acknowledging Contributors
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/>
+    <label for="toctree-checkbox-26">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/acknowledgement/acknowledgement-members.html">
+       Community Members and Shared Ownership
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/acknowledgement/acknowledgement-record.html">
+       Record of Contributions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/coworking.html">
+     Community Coworking Calls
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/>
+    <label for="toctree-checkbox-27">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coworking/coworking-motivation.html">
+       Background, Motivations, and Techniques
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coworking/coworking-weekly.html">
+       Weekly Coworking Calls
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coworking/coworking-organisation.html">
+       Organising coworking calls
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Visit our <a href="https://github.com/alan-turing-institute/the-turing-way">GitHub Repository</a> <div>This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a></div>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/reproducible-research/testing/testing-unittest.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#beneficios-do-teste-de-unidade">
+   Benefícios do Teste de Unidade
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dicas-de-teste-unitario">
+   Dicas de Teste Unitário
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Teste Unitário</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#beneficios-do-teste-de-unidade">
+   Benefícios do Teste de Unidade
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dicas-de-teste-unitario">
+   Dicas de Teste Unitário
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="teste-unitario">
+<span id="rr-testing-unittest"></span><h1>Teste Unitário<a class="headerlink" href="#teste-unitario" title="Permalink to this headline">¶</a></h1>
+<p>Os testes unitários são responsáveis por testar os elementos individuais de código de uma forma isolada e altamente direcionada. A funcionalidade de funções e classes individuais é testada por conta própria. O objetivo é validar que cada unidade do software funciona conforme projetado. Uma unidade é a menor parte testável de qualquer software. Na programação processual, uma unidade pode ser um programa, um funcionamento ou um procedimento individuais. Na programação orientada para os objetos, a unidade mais pequena é tipicamente um método. Geralmente ele tem uma ou algumas entradas e geralmente uma única saída. Quaisquer dependências externas devem ser substituídas por implementações de esboço ou simulação (mock, em inglês) para focar o teste completamente no código em questão.</p>
+<p>Testes de unidade são essenciais para testar a exatidão dos componentes de código individuais para consistência interna e exatidão antes de serem colocados em contextos mais complexos. A extensão limitada dos testes e a eliminação das dependências facilita a perseguição da causa de quaisquer defeitos. Também é o melhor momento para testar uma variedade de entradas e ramificações de código que podem ser difíceis de acertar mais tarde. Por exemplo, os testes do sistema muitas vezes demoram tempo a ser executados, e provavelmente será impraticável ter testes de sistema para cada caminho possível através de um código que tenha mais do que algumas instruções condicionais. Os testes unitários são mais pequenos, mais rápidos, pelo que é mais prático abranger todos os casos possíveis com eles.</p>
+<p>Muitas vezes, depois de quaisquer testes de fumo, os testes unitários são os primeiros a ser executados quando são feitas quaisquer alterações.</p>
+<div class="section" id="beneficios-do-teste-de-unidade">
+<h2>Benefícios do Teste de Unidade<a class="headerlink" href="#beneficios-do-teste-de-unidade" title="Permalink to this headline">¶</a></h2>
+<p>Se um pesquisador altera um trecho de código ou como ele é executado, como eles podem ter certeza de que isso não quebrou algo? Eles podem executar alguns testes, mas sem testar cada pequena parte de código individualmente como podem ter certeza? Testes de unidade dão aos pesquisadores essa certeza, e lhes permite estar confiantes ao alterar e manter seu código.</p>
+<p>Aqui está um pequeno exemplo. Diga que um pesquisador tem uma pequena função que faz uma coisa simples (aqui apenas uma linha para brevidade). Neste exemplo, isto irá aumentar um número para a quinta potência:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">take_fifth_power</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+  <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+<p>O teste de unidade para esta função pode se parecer com isto:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_take_fifth_power</span><span class="p">():</span>
+  <span class="k">assert</span> <span class="n">take_fifth_power</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span> <span class="o">==</span> <span class="mf">7.59375</span>
+</pre></div>
+</div>
+<p>Então ele verifica se o resultado correto é gerado para uma determinada entrada. Se não, o teste falhará. O pesquisador continua com seu trabalho. No meio do caminho, eles decidem arrumar essa função, multiplicar o número cinco vezes como esse é um pouco grosseiro. Eles alteram o resultado <code class="docutils literal notranslate"><span class="pre">=</span> <span class="pre">x</span> <span class="pre">*</span> <span class="pre">x</span> <span class="pre">*</span> <span class="pre">x</span> <span class="pre">*</span> <span class="pre">x</span></code> linha para <code class="docutils literal notranslate"><span class="pre">result</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">*</span> <span class="pre">5</span></code>. Na próxima vez que eles executarem seus testes de unidade, esse teste falhará, porque eles apenas cometeram um erro. Talvez precisassem de um café, talvez seus dedos escorregassem, talvez seu colega atirou neles na orelha com um dardo do nervo e o distraiu, mas quando eles estavam arrumando essa função, eles deveriam ter escrito <code class="docutils literal notranslate"><span class="pre">resultado</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">**</span> <span class="pre">5</span></code> <em>não</em> <code class="docutils literal notranslate"><span class="pre">resultado</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">*</span> <span class="pre">5</span></code>. O teste que falhou irá sinalizar o erro e poderá ser corrigido rapidamente. Se um erro como este não fosse observado, poderia levar a erros graves no trabalho do investigador.</p>
+<p>Portanto, o teste por unidade conduz a um código mais confiável, mas também existem outros benefícios. Em primeiro lugar, torna o desenvolvimento mais rápido, tornando os bugs mais fáceis de encontrar. Testes em grande escala que testam grandes porções de código (enquanto ainda são úteis) têm a desvantagem de, se eles falharem, ser difícil identificar a fonte do erro. Porque testes de unidade por sua própria definição testam pequenos pedaços de código, eles ajudam os desenvolvedores a encontrar a causa de um erro muito mais rápido do que testes de nível superior ou código sem testes. Testes de unidade também tornam a correção de erros mais rápido e mais fácil porque eles capturam bugs cedo enquanto o impacto é limitado a pequenas unidades individuais. Se não forem detectados erros mais cedo via testes unitários, então pode demorar muito para serem descobertos, impactar mais tarde trabalho que construído sobre o código defeituoso. Isso significa que muito mais código está em risco e que consertar o bug demora mais tempo.</p>
+<p>O outro grande benefício do teste por unidade de medida é o facto de ele incentivar fortemente os investigadores a escrever código modular porque o código modular é muito mais fácil de escrever testes por unidade. Código modular é um código que é dividido em partes gerenciáveis que cada uma realiza tarefas simples. Isso normalmente é alcançado dividindo o código em funções e grupos de funções. Em contraste, um script que é apenas uma longa série contínua de linhas que produz um resultado é altamente não-modular.</p>
+<p>Código modular também é muito mais fácil de reutilizar. Por exemplo, se um pesquisador tiver uma função individual que faça alguma coisa útil e em um projeto futuro eles precisam fazer isso novamente é trivial copiar ou importar a função. Em contraste, se o código que faz este Coisa Útil é entrelaçado com uma grande quantidade de outro código em um script longo, é muito mais difícil separá-lo para reutilização.</p>
+</div>
+<div class="section" id="dicas-de-teste-unitario">
+<h2>Dicas de Teste Unitário<a class="headerlink" href="#dicas-de-teste-unitario" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Muitos frameworks de teste possuem ferramentas especificamente voltadas para a criação e execução de testes unitários.</p></li>
+<li><p>Isolar o ambiente de desenvolvimento do ambiente de teste.</p></li>
+<li><p>Escreva casos de teste que sejam independentes um do outro. Por exemplo, se uma unidade A utiliza o resultado fornecido por outra unidade B, você deve testar unidade A com um <a class="reference external" href="#Use_test_doubles_stubs_mocking_where_appropriate">teste duplo</a>ao invés de realmente chamar a unidade B. Se você não fizer isso com falha de teste pode ser devido a uma falha na unidade A <em>ou</em> unidade B, tornar o erro mais difícil de rastrear.</p></li>
+<li><p>Mire em cobrir todos os caminhos através de uma unidade. Preste especial atenção às condições do loop.</p></li>
+<li><p>Além de escrever casos para verificar o comportamento, escreva casos para garantir o desempenho do código. Por exemplo, se uma função que deve somar dois números leva vários minutos para ser executada, é provável que haja um problema.</p></li>
+<li><p>Se você encontrar um defeito no seu código, escreva um teste que o explique Porquê? Porquê? Em primeiro lugar, mais tarde será possível apanhar o defeito se não o repararmos correctamente. Em segundo lugar, a sua suíte de testes é agora mais abrangente. Em terceiro lugar, provavelmente você vai ser muito preguiçoso para escrever o teste depois que você já tiver corrigido o erro. Diga um código tem uma função simples para classificar as pessoas como adultos ou crianças:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">adult_or_child</span><span class="p">(</span><span class="n">idade</span><span class="p">):</span>
+
+  <span class="c1"># Se a idade for maior ou igual a 18 classificá-los como um adulto</span>
+  <span class="n">se</span> <span class="n">idade</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="n">person_status</span> <span class="o">=</span> <span class="s1">&#39;Adulto&#39;</span>
+
+  <span class="c1"># Se a pessoa não é um adulto classifica-os como um filho</span>
+  <span class="n">outro</span><span class="p">:</span>
+    <span class="n">person_status</span> <span class="o">=</span> <span class="s1">&#39;Criança&#39;</span>
+
+  <span class="n">retorne</span> <span class="n">person_status</span>
+</pre></div>
+</div>
+<p>E diga que este código tem um teste de unidade assim:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_adult_or_child</span><span class="p">():</span>
+
+  <span class="c1"># Teste se um adulto está classificado corretamente como um adulto</span>
+  <span class="k">assert</span> <span class="n">adult_or_child</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;Adult&#39;</span>
+
+  <span class="c1"># Teste se uma criança está classificada corretamente como uma criança</span>
+  <span class="k">assert</span> <span class="n">adult_or_child</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;Child&#39;</span>
+
+  <span class="k">return</span>
+</pre></div>
+</div>
+<p>Há um problema com esse código que não está sendo testado: se uma idade negativa for fornecida, ele irá classificar alegremente a pessoa como uma criança, apesar das idades negativas não serem possíveis. O código deve lançar um erro neste caso.</p>
+<p>Então, assim que o erro for corrigido:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">adult_or_child</span><span class="p">(</span><span class="n">idade</span><span class="p">):</span>
+
+<span class="c1"># Verifique a idade é válida</span>
+<span class="n">se</span> <span class="n">idade</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+  <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">,</span> <span class="s1">&#39;Não é possível ter uma idade negativa&#39;</span>
+
+<span class="c1"># Se a idade for maior ou igual a 18 classificá-los como um adulto</span>
+<span class="n">se</span> <span class="n">idade</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+  <span class="n">person_status</span> <span class="o">=</span> <span class="s1">&#39;Adulto&#39;</span>
+
+<span class="c1"># Se a pessoa não é um adulto classifica-os como uma criança</span>
+<span class="n">outra</span> <span class="n">pessoa</span><span class="p">:</span>
+  <span class="n">person_status</span> <span class="o">=</span> <span class="s1">&#39;Criança&#39;</span>
+
+<span class="k">return</span> <span class="n">person_status</span>
+</pre></div>
+</div>
+<p>Vá em frente e escreva um teste para garantir que futuras alterações no código não possam fazer com que isso aconteça novamente:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_adult_or_child</span><span class="p">():</span>
+
+<span class="c1">#Teste que um adulto está classificado corretamente como um adulto</span>
+<span class="k">assert</span> <span class="n">adult_or_child</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;Adult&#39;</span>
+
+<span class="c1"># Teste que uma criança está classificada corretamente como uma criança</span>
+<span class="k">assert</span> <span class="n">adult_or_child</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;Child&#39;</span>
+
+<span class="c1"># Teste que fornecer uma idade inválida resulta em um erro</span>
+<span class="n">com</span> <span class="n">pyteste</span><span class="o">.</span> <span class="n">aises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
+    <span class="n">adult_or_child</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./reproducible-research/testing"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The Turing Way Community<br/>
+    
+        &copy; Copyright 2020-2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1474 @@
+
+<!DOCTYPE html>
+
+<html lang="po">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unionisation &#8212; The Turing Way</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Assopando" href="activism-whistleblowing.html" />
+    <link rel="prev" title="Ativismo para Pesquisadores" href="../activism.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="po">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-167881009-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">The Turing Way</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../welcome.html">
+   Boas-vindas
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../reproducible-research/reproducible-research.html">
+   Guia de Pesquisa Reprodutível
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/vcs.html">
+     Version Control
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-workflow.html">
+       General Workflow
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-git.html">
+       Getting Started with Git
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-git-commit.html">
+       Git Commit Command
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-git-compare.html">
+       Retrieving and Comparing Versions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-git-branches.html">
+       Git Branches
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-git-merge.html">
+       Merging Branches in Git
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-git-interactive.html">
+       Interactive, Visual Git
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-github.html">
+       Git Commands to Work on GitHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-git-summary.html">
+       Summary Table of Git Commands
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-data.html">
+       Version Control for Data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-personal-stories.html">
+       Personal Stories
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-checklist.html">
+       Checklist
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-resources.html">
+       Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/licensing.html">
+     Licensing
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/licensing/licensing-compatibility.html">
+       License Compatibililty
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/licensing/licensing-checklist.html">
+       Checklist
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/rdm.html">
+     Research Data Management
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-data.html">
+       Research Data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-fair.html">
+       The FAIR Principles and Practices
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-storage.html">
+       Data Storage and Organisation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-spreadsheets.html">
+       Data Organisation in Spreadsheets
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-toolkits.html">
+       Research Data Management Toolkits
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-stories.html">
+       Personal Impact Stories
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-checklist.html">
+       Checklist
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-resources.html">
+       Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/renv.html">
+     Reproducible Environments
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/renv/renv-options.html">
+       Capturing Computational Environments
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/renv/renv-package.html">
+       Package Management Systems
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/renv/renv-yaml.html">
+       YAML
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/renv/renv-resources.html">
+       Resources and Checklist
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/binderhub.html">
+     BinderHub
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/binderhub/binderhub-introduction.html">
+       Introduction to BinderHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/binderhub/binderhub-compute.html">
+       Compute Resources
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/binderhub/binderhub-build.html">
+       Build Your Own BinderHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/binderhub/binderhub-resources.html">
+       Resources for BinderHub
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/reviewing.html">
+     Code Reviewing Process
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/reviewing/reviewing-motivation.html">
+       Motivation for code reviewing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/reviewing/reviewing-recommend.html">
+       Recommendations for code reviewing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/reviewing/reviewing-workflow.html">
+       Code review workflow
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/reviewing/reviewing-resources.html">
+       Resources for code reviewing
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/code-reuse.html">
+     Reusable Code
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/code-reuse/code-reuse-overview.html">
+       Overview of Code Reuse
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/code-reuse/code-reuse-details.html">
+       Detailed Recommendations for Code Reuse
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/ci.html">
+     Continuous Integration (CI)
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/ci/ci-options.html">
+       Intro to Continuous integration (CI)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/ci/ci-building-gh-actions.html">
+       Building a Block of a GitHub actions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/ci/ci-practices.html">
+       Best practices and recommendations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/ci/ci-resources.html">
+       Checklist and Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/make.html">
+     Reproducible Research with Make
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/make/make-examples.html">
+       Learn "Make" by examples
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/make/make-debugging.html">
+       Debugging Makefiles
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/make/make-results.html">
+       Including numerical results and tables
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/make/make-resources.html">
+       Resources for "Make"
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/make/make-appendix.html">
+       Appendix
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reproducible-research/compendia.html">
+     Research Compendia
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/risk-assess.html">
+     Risk Assessment
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/risk-assess/risk-assess-impact.html">
+       Complexity and Impact of Risk Assessment
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/risk-assess/risk-assess-resources.html">
+       Summary of Risk Assessment
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/case-studies.html">
+     Case Studies
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../collaboration/collaboration.html">
+   Guia para colaboração
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/github-novice.html">
+     Getting Started With GitHub
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/github-novice/github-novice-firststeps.html">
+       First steps on GitHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/github-novice/github-novice-features.html">
+       Using more GitHub features
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/github-novice/github-novice-advanced.html">
+       Advanced GitHub features
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/maintain-review.html">
+     Maintainers and Reviewers on GitHub
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+    <label for="toctree-checkbox-15">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-maintenance.html">
+       Project Maintenance
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-permissions.html">
+       Ownership and Permissions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-review.html">
+       Reviewing Contributions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-merge.html">
+       Merging Contributions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-resources.html">
+       Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/new-community.html">
+     Managing a New Community and Team
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-guide.html">
+       Guide to Planning a Community
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-techissues.html">
+       Addressing Technical Issues
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-differences.html">
+       Valuing Diversity and Differences
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-teamwork.html">
+       Teamwork
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/leadership.html">
+     Leadership in Data Science
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+    <label for="toctree-checkbox-17">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/leadership/leadership-stories.html">
+       Personal Stories of Leadership
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/remote-collab.html">
+     Remote Collaboration
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+    <label for="toctree-checkbox-18">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-meetings.html">
+       Organising Remote Meetings
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-guidelines.html">
+       Guidelines for Remote Collaboration
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-tools.html">
+       Tools for Remote Collaboration
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-conferences.html">
+       Organising Remote Conferences
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-chairs.html">
+       Chairing Remote Events
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-participation.html">
+       Participating in Remote Events
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-management.html">
+       Managing Distributed Teams
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-informal.html">
+       Informal Coffee Chats
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-prosandcons.html">
+       Perceived Pros and Cons
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/shared-ownership.html">
+     Shared Ownership in Open Source Projects
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+    <label for="toctree-checkbox-19">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-projects.html">
+       Project Ownership
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-models.html">
+       Shared Ownership Models
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-challenges.html">
+       Challenges with Applying Ownership Models Retroactively
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-defaults.html">
+       Nudging for a Better Default
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../ethical-research.html">
+   Guia de Pesquisa Ética
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../preclinical-research.html">
+     Ethical Decisions in Preclinical Research
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../law-policy.html">
+     Law, Policy and Human Rights in Ethics
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+    <label for="toctree-checkbox-21">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../law-policy/law-policy-ethics.html">
+       Ethics and law
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../law-policy/law-policy-rights.html">
+       Human rights
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../law-policy/law-policy-resources.html">
+       Further Recommendations
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="../activism.html">
+     Activism for Researchers
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+    <label for="toctree-checkbox-22">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Unionisation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="activism-whistleblowing.html">
+       Whistleblowing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="activism-robodebt.html">
+       Case study - Robodebt
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="activism-case-study-google.html">
+       Case study - Google Workers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../internal-policy.html">
+     Internal Policy Advocacy
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../community-handbook/community-handbook.html">
+   Manual da Comunidade
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+  <label for="toctree-checkbox-23">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/coc.html">
+     Code of Conduct
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+    <label for="toctree-checkbox-24">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-details.html">
+       Code of Conduct in Detail
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-reporting.html">
+       Incident Reporting Guideline
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-enforcement.html">
+       Enforcement Manual
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-acknowledgement.html">
+       Acknowledgements
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/contributing.html">
+     Contributing and Developing Chapters - Templates and Workflow
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
+    <label for="toctree-checkbox-25">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/contributing/contributing-templates.html">
+       Templates
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/acknowledgement.html">
+     Acknowledging Contributors
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/>
+    <label for="toctree-checkbox-26">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/acknowledgement/acknowledgement-members.html">
+       Community Members and Shared Ownership
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/acknowledgement/acknowledgement-record.html">
+       Record of Contributions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/coworking.html">
+     Community Coworking Calls
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/>
+    <label for="toctree-checkbox-27">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coworking/coworking-motivation.html">
+       Background, Motivations, and Techniques
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coworking/coworking-weekly.html">
+       Weekly Coworking Calls
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coworking/coworking-organisation.html">
+       Organising coworking calls
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Visit our <a href="https://github.com/alan-turing-institute/the-turing-way">GitHub Repository</a> <div>This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a></div>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/ethical-research/activism/activism-unionisation.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#o-que-e-uma-uniao">
+   O que é uma união?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#o-que-podem-fazer-os-sindicatos">
+   O que podem fazer os sindicatos?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#o-que-e-accao-industrial">
+     O que é acção industrial?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#como-e-que-uma-uniao-ajuda-cientistas-e-investigadores">
+   Como é que uma união ajuda cientistas e investigadores?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#um-bit-of-history-a-associacao-de-trabalhadores-cientificos-reino-unido">
+     Um Bit of History: A Associação de Trabalhadores Científicos (Reino Unido)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nunca-antes-fiz-parte-de-uma-uniao-por-onde-comeco">
+   Nunca antes fiz parte de uma união: por onde começo?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#o-que-voce-pode-fazer-como-membro-sindical">
+   O que você pode fazer como membro sindical
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#seja-um-membro-ativo">
+     Seja um membro ativo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#torne-se-um-representante">
+     Torne-se um representante
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conduzir-uma-campanha">
+     Conduzir uma campanha
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mais-recursos">
+       Mais recursos
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemplos-de-sindicatos-relevantes">
+     Exemplos de sindicatos relevantes
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#global">
+       Global
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reino-unido">
+       Reino Unido
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#irlanda">
+       Irlanda
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#franca">
+       França
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#italia">
+       Itália
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#espanha">
+       Espanha
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#estados-unidos">
+       Estados Unidos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#australia">
+       Austrália
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Unionisation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#o-que-e-uma-uniao">
+   O que é uma união?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#o-que-podem-fazer-os-sindicatos">
+   O que podem fazer os sindicatos?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#o-que-e-accao-industrial">
+     O que é acção industrial?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#como-e-que-uma-uniao-ajuda-cientistas-e-investigadores">
+   Como é que uma união ajuda cientistas e investigadores?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#um-bit-of-history-a-associacao-de-trabalhadores-cientificos-reino-unido">
+     Um Bit of History: A Associação de Trabalhadores Científicos (Reino Unido)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nunca-antes-fiz-parte-de-uma-uniao-por-onde-comeco">
+   Nunca antes fiz parte de uma união: por onde começo?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#o-que-voce-pode-fazer-como-membro-sindical">
+   O que você pode fazer como membro sindical
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#seja-um-membro-ativo">
+     Seja um membro ativo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#torne-se-um-representante">
+     Torne-se um representante
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conduzir-uma-campanha">
+     Conduzir uma campanha
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mais-recursos">
+       Mais recursos
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemplos-de-sindicatos-relevantes">
+     Exemplos de sindicatos relevantes
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#global">
+       Global
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reino-unido">
+       Reino Unido
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#irlanda">
+       Irlanda
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#franca">
+       França
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#italia">
+       Itália
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#espanha">
+       Espanha
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#estados-unidos">
+       Estados Unidos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#australia">
+       Austrália
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="unionisation">
+<span id="er-activism-unionisation"></span><h1>Unionisation<a class="headerlink" href="#unionisation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="o-que-e-uma-uniao">
+<span id="er-activismo-unionisation-what"></span><h2>O que é uma união?<a class="headerlink" href="#o-que-e-uma-uniao" title="Permalink to this headline">¶</a></h2>
+<p>Um sindicato é uma forma formalizada de os trabalhadores organizarem e negociarem colectivamente a nível institucional, sectorial ou nacional. Uma união é organizada em ramos que estão espalhados geograficamente (por exemplo, no Norte de Londres) ou a nível institucional (por exemplo, trabalhos ou departamentos), dependendo da distribuição dos membros e da forma como os sindicalistas funcionam. Os membros dos sindicatos pagam tipicamente uma taxa mensal, embora esta seja por vezes rejeitada por certas categorias de membros. Por exemplo, a organização sindical UCU do Reino Unido permite que os estudantes licenciados adiram gratuitamente.</p>
+<p>Alguns membros assumem responsabilidades adicionais como &quot;representantes&quot; ou &quot;administradores de loja&quot;, ajudando a organizar o funcionamento das filiais, apoiar os membros com questões relacionadas com o local de trabalho e, por vezes, representar o ramo a nível nacional. Sindicatos maiores têm frequentemente empregados a tempo inteiro para apoiar representantes e trabalhadores, que são também responsáveis por áreas como o desenvolvimento da política sindical. relações de imprensa e organização de quaisquer grandes reuniões, por exemplo, conferências anuais.</p>
+<p>Em alguns, mas não em todos os países, ser membro de um sindicato é uma característica protegida. Isto significa que as organizações não podem disparar pessoas por serem membros (mas nem sempre foi esse o caso). Sob o Regulamento Geral de Proteção de Dados (GDPR), A União Europeia considera que a adesão à União Europeia são dados sensíveis e na mesma categoria que os dados genéticos ou os dados sobre o género.</p>
+<p>(er-activismo-união-unionatividades)=</p>
+</div>
+<div class="section" id="o-que-podem-fazer-os-sindicatos">
+<h2>O que podem fazer os sindicatos?<a class="headerlink" href="#o-que-podem-fazer-os-sindicatos" title="Permalink to this headline">¶</a></h2>
+<p>As uniões são um veículo para os seus membros organizarem juntos e apoiarem-se mutuamente no seu local de trabalho e na sua indústria. Os sindicatos desenvolvem uma série de acções para melhorar as condições de trabalho dos seus membros.</p>
+<p>Estas podem ser a nível individual, local de trabalho, ou da indústria.</p>
+<p>A nível individual, os sindicatos podem:</p>
+<ul class="simple">
+<li><p>Oferecer suporte para indivíduos que tenham problemas no trabalho: por exemplo, apoiando indivíduos que foram discriminados ou intimidados em seu local de trabalho, ou cujos deveres envolvem práticas inseguras</p></li>
+<li><p>Deixe as pessoas cientes de seus direitos no trabalho, como as políticas as afetam e quais são as obrigações legais da organização</p></li>
+</ul>
+<p>Em um nível de local de trabalho, membros do ramo sindical podem:</p>
+<ul class="simple">
+<li><p>Negociar com a gestão em nome dos seus membros: chama-se &quot;negociação colectiva&quot; e pode ser utilizado para melhorar as condições de trabalho, os salários, as pensões, as pensões.</p></li>
+<li><p>Reveja as políticas existentes em um local de trabalho e defenda mudanças que melhorem a equidade, removam as influências patriarca/societárias e aumentem o apoio a membros marginalizados da força de trabalho.</p></li>
+<li><p>Aumentar as preocupações de saúde e segurança sobre áreas de trabalho específicas ou deveres</p></li>
+<li><p>Organizar os membros como &quot;trabalham para governar&quot;, onde não há horas extras ou deveres fora dos que estão em descrições formais de funções</p></li>
+<li><p>Vá em greve, onde nenhum trabalho é realizado e, em vez disso, &quot;picareta&quot; seus locais de trabalho, reunindo fora e incentivando outros a se juntarem a eles</p></li>
+<li><p>Organizar outras ações industriais</p></li>
+<li><p>Discuta políticas e posições que os membros gostariam de adoptar sobre questões específicas</p></li>
+</ul>
+<p>A nível da indústria, os sindicatos podem:</p>
+<ul class="simple">
+<li><p>Entre na política do governo por meio de consultas de respostas ou de pressões (por exemplo, falando com a imprensa sobre um assunto, escrever artigos ou submeter processos formais como audições)</p></li>
+<li><p>Organizar greves e acções industriais em sectores inteiros</p></li>
+</ul>
+<p>(er-activismo-unionização-industrial)=</p>
+<div class="section" id="o-que-e-accao-industrial">
+<h3>O que é acção industrial?<a class="headerlink" href="#o-que-e-accao-industrial" title="Permalink to this headline">¶</a></h3>
+<p>As acções industriais abrangem uma série de actividades diferentes que os sindicatos unem para realçar questões no seu local de trabalho ou na sua indústria. O mais conhecido é &quot;impressionante&quot; ou &quot;paradas de trabalho&quot;, onde os membros se recusam a entrar em trabalho e a formar linhas de picket fora de seus locais de trabalho. No entanto, há muitos outros tipos de actividades que são abrangidas pela acção industrial, incluindo: trabalhar para governar (ou trabalhar para contrato), denúncia em massa de violações de saúde e segurança, ocupações no local de trabalho, gotas de estandarte ou marchas.</p>
+</div>
+</div>
+<div class="section" id="como-e-que-uma-uniao-ajuda-cientistas-e-investigadores">
+<span id="er-activism-unionisation-unionhow"></span><h2>Como é que uma união ajuda cientistas e investigadores?<a class="headerlink" href="#como-e-que-uma-uniao-ajuda-cientistas-e-investigadores" title="Permalink to this headline">¶</a></h2>
+<p>Os cientistas e os investigadores desempenham uma série de papéis diferentes e há formas específicas de os sindicatos poderem ajudar com esses papéis.</p>
+<ul class="simple">
+<li><p>Defender que a pesquisa aberta deve ser activamente apoiada e encorajada pelas instituições, bem como tida em consideração na progressão da carreira</p></li>
+<li><p>Exigindo apoio legal na pesquisa</p></li>
+<li><p>Apoiar PhDs e pesquisadores pós-doutorados em suas relações com PIs</p></li>
+<li><p>Campanhas contra a perda do trabalho, por exemplo, ensino de curta duração, pago por hora ou posições de pesquisa</p></li>
+<li><p>Proporcionar uma visão alternativa da investigação académica como um esforço colaborativo, aberto, iterativo, em vez de uma busca única e competitiva</p></li>
+<li><p>Proporcionar um fórum para compartilhar outras preocupações sobre como a investigação científica é feita e encontrar outros pesquisadores que queiram enfrentá-las</p></li>
+</ul>
+<p>Os cientistas e pesquisadores trabalham em universidades, instituições de pesquisa e sem lucros. Todos estes são locais de trabalho: têm políticas no local de trabalho, e os sindicatos podem ajudar a criar políticas e a controlar se estão a ser aplicados.</p>
+<div class="section" id="um-bit-of-history-a-associacao-de-trabalhadores-cientificos-reino-unido">
+<span id="er-activism-unionisation-unionhistory"></span><h3>Um Bit of History: A Associação de Trabalhadores Científicos (Reino Unido)<a class="headerlink" href="#um-bit-of-history-a-associacao-de-trabalhadores-cientificos-reino-unido" title="Permalink to this headline">¶</a></h3>
+<p>Tratava-se de um sindicato para cientistas fundado no início do século XX, que desempenhou um papel de liderança na fundação de sindicatos semelhantes em todo o mundo.</p>
+<blockquote>
+<div><p>A união começou sua história como a União Nacional dos Trabalhadores Científicos em 1918, como resultado da rápida e crescente classe e consciência profissional, bem como a politização dos cientistas na sequência da Primeira Guerra Mundial. Em 1927 o nome foi alterado para o AScW, e continuou assim até 1968, quando se uniu com a Associação do Pessoal de Supervisão, Executivos e técnicos (ASSET) para formar a Associação dos Staffs Científicos, Técnicos e Gestores (ASTMS) um precursor do MSF e, em última análise, unificado. A união foi estabelecida “com uma plataforma explicitamente socialista”, e várias das suas principais figuras eram cientistas respeitados e socialistas activos e membros do Partido Comunista, como Hyman Levy e John Desmond Bernal. Vários vencedores do Prêmio Nobel eram membros. Os cientistas e técnicos sindicais organizados na investigação governamental e no sector privado, e se tornou um proeminente propaganda para a expansão da R&amp;D de financiamento público, bem como tomar posições políticas sobre o uso ético da ciência, contra a ameaça global do fascismo e da orientação da investigação científica para fins pacíficos. A AScW continuou a encontrar a Federação Mundial dos Trabalhadores Científicos em 1946, uma organização que durante a Guerra Fria foi acusada de seguir a linha soviética e de ser uma frente comunista.</p>
+</div></blockquote>
+<p>O AScW se comunicou com os membros através de boletins informativos, bem como um documento nacional: O Worker Científico <a class="reference external" href="https://wellcomelibrary.org/item/b19915299#?c=0&amp;m=0&amp;s=0&amp;cv=0&amp;z=-0.8157%2C-0.0826%2C2.6314%2C1.6529">Clique aqui para ler uma cópia no arquivo de bem vindo</a></p>
+<p>(-início-ativo-unionisation-start)=</p>
+</div>
+</div>
+<div class="section" id="nunca-antes-fiz-parte-de-uma-uniao-por-onde-comeco">
+<h2>Nunca antes fiz parte de uma união: por onde começo?<a class="headerlink" href="#nunca-antes-fiz-parte-de-uma-uniao-por-onde-comeco" title="Permalink to this headline">¶</a></h2>
+<p>Comece por descobrir se já existe uma união no seu local de trabalho. Se assim for, haverá uma pessoa com a qual se poderá falar em aderir: pode ser conhecida como representante ou administrador do sindicato. Juntar-se à união que já representa pessoas no seu local de trabalho aumenta a sua capacidade de negociar em nome de todos e organizar o local de trabalho. Alguns locais de trabalho podem ter vários sindicatos diferentes que representam diferentes tipos de pessoal. Nestes casos, você deve se juntar àquele que você sente melhor que corresponda ao tipo de trabalho que você faz.</p>
+<p>Se não existe uma união no seu local de trabalho, verifique os sindicatos que já existem na sua região ou país. <a class="reference internal" href="#er-activism-unionisation-unionexamples"><span class="std std-ref">link to the section on examples of unions</span></a> You may be able to join one that is relevant to your industry or duties: or you may be able to join a general union que representa vários funcionários diferentes.</p>
+<p>Para aderir a um sindicato, talvez seja necessário pagar taxas ou direitos sindicais. Estas são quase sempre escalonantes, com base no quanto você ganha: alguns sindicatos também têm filiação livre para pessoas em certos cargos ou papéis.</p>
+</div>
+<div class="section" id="o-que-voce-pode-fazer-como-membro-sindical">
+<span id="er-activism-unionisation-unionjoin"></span><h2>O que você pode fazer como membro sindical<a class="headerlink" href="#o-que-voce-pode-fazer-como-membro-sindical" title="Permalink to this headline">¶</a></h2>
+<p>As uniões são projectos colectivos e são pessoas detidas!</p>
+<div class="section" id="seja-um-membro-ativo">
+<h3>Seja um membro ativo<a class="headerlink" href="#seja-um-membro-ativo" title="Permalink to this headline">¶</a></h3>
+<p>Quando você é membro, você pode assistir às reuniões. A participação em reuniões sindicais no seu local de trabalho é também uma boa maneira de saber quais são as questões que estão a afectar os seus colegas. As reuniões são um bom local para saber em que questões a União está a trabalhar e para as discutir com outros membros. Participar em reuniões e acompanhar as comunicações sindicais é uma boa maneira de descobrir como levantar questões que nos preocupam. A sua união pode também ter reuniões regionais ou nacionais: estes são bons locais para se inteirar mais do trabalho sindical em diferentes áreas.</p>
+<p>Tal como quaisquer organizações, os sindicatos têm os seus próprios sistemas de governação e de processos de decisão. É assim que o senhor deputado tem uma palavra a dizer sobre o que a sua união está a fazer. Você pode se envolver votando para que as pessoas assumam funções específicas no local de trabalho ou no nível da indústria. propor temas de debate em reuniões, ou contribuir para debates em curso. Também se poderá pedir para votar sobre as acções específicas que a união do seu local de trabalho tomará, incluindo aceitar ou rejeitar uma proposta política feita pela gestão.</p>
+<p>Sua união pode pedir informações sobre questões: elas podem ir desde coisas específicas ao seu trabalho ou local de trabalho. a questões que afectam toda a sua indústria. Este contributo é valioso para ajudar os sindicatos a suscitar preocupações e a fazer mudanças. A sua união deve ter uma segurança, maneira confidencial para você compartilhar suas experiências e opiniões (se você não tem certeza sobre os canais de comunicação que sua união está usando, fale sobre isso com as pessoas específicas que estão pedindo entrada: você pode pedir para usar canais alternativos, se precisar.)</p>
+<p>Seu sindicato pode pedir que você tome ações específicas: por exemplo, para assinar uma petição, escreva a um funcionário eleito, ou participe numa campanha das redes sociais. Em alguns casos, sua união pode decidir considerar ou tomar medidas de greve. O processo de tomada em greve difere em diferentes sindicatos, e em alguns países existem restrições legais que cobrem os tipos de acções que são protegidas.</p>
+</div>
+<div class="section" id="torne-se-um-representante">
+<span id="er-activismo-unionisation-representative"></span><h3>Torne-se um representante<a class="headerlink" href="#torne-se-um-representante" title="Permalink to this headline">¶</a></h3>
+<p>Como qualquer comunidade, os sindicatos precisam que as pessoas assumam funções organizacionais no seio da União. Estas funções variarão dependendo da dimensão da sua união e do seu funcionamento.</p>
+<p>Alguns cargos podem incluir:</p>
+<ul class="simple">
+<li><p>Apoiar outros sindicalistas: acompanhar, por exemplo, os seus colegas a reuniões disciplinares ou reuniões com gestão, prestar apoio e tomar notas</p></li>
+<li><p>Ser um representante sindical para um determinado grupo de funcionários dentro do seu local de trabalho: pode ser uma equipe ou um departamento, ou um grupo de funcionários que desempenham funções semelhantes em todo o local de trabalho</p></li>
+<li><p>Negociando uma questão específica, por exemplo, remuneração, pensões ou direitos de férias, com gestão</p></li>
+<li><p>Representando seu local de trabalho em grandes reuniões sindicais, por exemplo, uma reunião nacional</p></li>
+</ul>
+<p>O processo para se tornar um representante irá variar consoante a forma como a sua união funciona. Poderão ter de se candidatar às eleições ou ser aprovados por uma reunião de sindicalistas.</p>
+</div>
+<div class="section" id="conduzir-uma-campanha">
+<span id="er-activism-unionisation-campaign"></span><h3>Conduzir uma campanha<a class="headerlink" href="#conduzir-uma-campanha" title="Permalink to this headline">¶</a></h3>
+<p>Se você tem problemas no seu local de trabalho ou na indústria, então uma maneira de promover a mudança é liderando uma campanha dentro da sua união (por um sucursal ou nacional). Campanhas podem assumir quase tantas formas quantas haver issues para fazer campanha!</p>
+<p>Como ponto de partida, É bom ter um problema e meta claros em mente o que você gostaria de conseguir e algumas outras pessoas que concordam com o que você deseja alterar.</p>
+<p>Se pensa que é isso que quer fazer, a União terá geralmente recursos para se iniciar. Também é possível encontrar passos mais práticos no capítulo de defesa da política interna do Livro de Ética.</p>
+<p>(er-activismo-unionização-recursos)=</p>
+<div class="section" id="mais-recursos">
+<h4>Mais recursos<a class="headerlink" href="#mais-recursos" title="Permalink to this headline">¶</a></h4>
+<p>A maioria dos sindicatos terá exemplos ou guias sobre como entrar ou iniciar campanhas (por exemplo, UNISON, um UK union tem uma <a class="reference external" href="https://www.unison.org.uk/get-involved/campaign-for-change/">página da Web com detalhes</a>).</p>
+<p>Outras organizações que oferecem formação e apoio sobre como fazer campanha efetivamente incluem:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.ellabakerorganising.org.uk/">A Escola de Baker de Ella</a></p></li>
+<li><p><a class="reference external" href="https://www.ucsusa.org/building-skills-science-network">A União dos Cientistas Inquietos</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="exemplos-de-sindicatos-relevantes">
+<span id="er-activism-unionisation-unionexamples"></span><h3>Exemplos de sindicatos relevantes<a class="headerlink" href="#exemplos-de-sindicatos-relevantes" title="Permalink to this headline">¶</a></h3>
+<p>Reconhecemos que a lista abaixo é muito centrada no Reino Unido e gostaríamos de receber aditamentos para outros países.</p>
+<div class="section" id="global">
+<h4>Global<a class="headerlink" href="#global" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Coligação de Trabalhadores Técnicos, Global (organização focada em trabalhadores de tecnologia na indústria) <a class="reference external" href="https://techworkerscoalition.org/">site</a></p></li>
+</ul>
+</div>
+<div class="section" id="reino-unido">
+<h4>Reino Unido<a class="headerlink" href="#reino-unido" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><strong>Unite</strong>, Reino Unido, a maior união de serviços profissionais com mais de 1 milhão de membros <a class="reference external" href="https://unitetheunion.org/">site</a></p></li>
+<li><p><strong>University &amp; Colleges Union (UCU)</strong>, Reino Unido, abrange pesquisadores, pessoal académico e altos graus de pessoal de serviços profissionais no Ensino Superior &amp; Instituições de Ensino Futuro <a class="reference external" href="https://www.ucu.org.uk/">website</a></p></li>
+<li><p><strong>Prospect</strong>, Reino Unido, union covering scientists &amp; engineers <a class="reference external" href="https://members.prospect.org.uk/our-industries/science/index">website</a></p></li>
+<li><p><strong>Sites da União de Serviços Públicos e Comerciais (PCS)</strong>, Reino Unido, União de Serviços Públicos</p></li>
+<li><p>United Voices of the World (UVW), Charity Sector Workers Branch <a class="reference external" href="https://www.uvwunion.org.uk/en/sectors/charity-sector/">site</a></p></li>
+<li><p>Sindicato Independente de Trabalhadores da Grã-Bretanha (IWGB), Gabinete de Trabalhadores do Setor de Caridade <a class="reference external" href="https://iwgb.org.uk/page/iwgb-charity-workers-branch/">site</a></p>
+<ul>
+<li><p>IWGB também tem uma série de ramificações cobrindo limpezas, recepcionistas e trabalhadores da indústria de jogos</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="irlanda">
+<h4>Irlanda<a class="headerlink" href="#irlanda" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><strong>Associação de Cientistas Laboratórios de Saúde Médicos (MLSA)</strong>, Irlanda, é o único sindicato que representa mais de 1600 Cientistas Médicos na Irlanda <a class="reference external" href="https://mlsa.ie/who-we-are">site</a></p></li>
+</ul>
+</div>
+<div class="section" id="franca">
+<h4>França<a class="headerlink" href="#franca" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><strong>Neutrampolim Française De├mocratique du Travail (CFDT)</strong> é a maior confederação sindical francesa por número de membros. Ela se originou como um ramo secular do sindicato cristão Confect, de├aise des Travailleurs Chre^\tiens (CFTC) <a class="reference external" href="https://cfdt.fr/">site</a></p></li>
+<li><p><strong>Confe├de├ration Ge^\neale du Travail (CGT)</strong> é o segundo maior sindicato francês por um número de membros. A CGT está concentrando sua atenção no sindicalismo no site <a class="reference external" href="https://www.cgt.fr/">do setor privado</a></p></li>
+<li><p><strong>A Confe├de├ration Ge├neale du Travail-Force Ouvrie├re (CGT-FO)</strong> foi fundada por antigos membros da Confederação Geral de Trabalho (CGT) que acusou essa federação para ser influenciada pelo site <a class="reference external" href="https://www.force-ouvriere.fr/?lang=fr">do Partido Comunista Francês</a></p></li>
+<li><p><strong>Confe^\de-ration Franconëaise de l’Encadrement-Confe├de─ration Ge├neł rale des Cadres (CFE-CGC)</strong> é exclusivamente focado na organização de sindicatos para funcionários profissionais com educação superior ou em cargos executivos ou em site de gestão</p></li>
+</ul>
+</div>
+<div class="section" id="italia">
+<h4>Itália<a class="headerlink" href="#italia" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><strong>A Confederazione Generale Italiana Lavoratori (CGIL)</strong> é a maior união italiana que conta mais de 5 milhões de membros <a class="reference external" href="http://www.cgil.it/">no site</a></p></li>
+<li><p><strong>A Confederazione Italiana Sindacato dei Lavoratori (CISL)</strong> é baseada em grupos de valores católicos romanos ligados ao site da Democracia Cristã</p></li>
+<li><p><strong>Unione Italiana Lavoratori (UIL)</strong> é o socialista, social democrático, (republican) e secular dividido do site CGIL</p></li>
+<li><p><strong>Único Sindacale Professori e Ricercatori (USPUR)</strong> é destinado a professores e pesquisadores <a class="reference external" href="https://www.uspur.it/">do site</a></p></li>
+<li><p><strong>Úone Degli Universitari (UDU)</strong> é focado em melhorar a experiência de estudantes universitários e a futura carreira <a class="reference external" href="https://www.unionedegliuniversitari.it/">site</a></p></li>
+</ul>
+</div>
+<div class="section" id="espanha">
+<h4>Espanha<a class="headerlink" href="#espanha" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><strong>Unio➲ n General de Trabajadores (UGT)</strong> é um dos principais sindicatos espanhóis, historicamente afiliado ao site do Partido dos Trabalhadores Socialistas Europeus (PSOE)</p></li>
+<li><p><strong>Confederacio├n Sindical de Comisiones Obreras (CCOO)</strong> é a segunda maior união da Espanha e é o site <a class="reference external" href="https://www.ccoo.es/">de eleições de trabalho</a></p></li>
+<li><p>**** A Federacion de Jovenes Investigadores (FJI-Precarios) </strong> está focada em melhorar as condições de trabalho de jovens pesquisadores, defender a dignidade da profissão de investigador, e em geral, melhorar a situação da ciência na Espanha <a class="reference external" href="http://precarios.org/Qui%C3%A9nes+somos">website</a></p></li>
+</ul>
+</div>
+<div class="section" id="estados-unidos">
+<h4>Estados Unidos<a class="headerlink" href="#estados-unidos" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><strong>Graduate Graduate Unions</strong> em várias universidades e faculdades estão organizando a <a class="reference external" href="https://en.wikipedia.org/wiki/Graduate_student_employee_unionization">página da Wikipedia</a></p></li>
+</ul>
+</div>
+<div class="section" id="australia">
+<h4>Austrália<a class="headerlink" href="#australia" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><strong>Cientista Profissional Australia</strong>, Austrália (união cobrindo cientistas do setor)<a class="reference external" href="https://scientists.professionalsaustralia.org.au/">site</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/List_of_trade_unions_in_Australia">Lista geral de Sindicatos na Austrália</a></p></li>
+</ul>
+<p>(er-activismo-unionização-resumo)=</p>
+</div>
+</div>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>As Uniões oferecem apoio aos investigadores e cientistas através de muitas pistas diferentes e há uma variedade de formas de os envolver. A primeira coisa a fazer é ver quais sindicatos estão activos no seu instution ou campo. Se a sua instituição não reconhece uma união, você pode ler através dos capítulos Whistleblowing e Internal Advocacy para mais ideias sobre como trabalhar para a mudança.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./ethical-research/activism"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../activism.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Ativismo para Pesquisadores</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="activism-whistleblowing.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Assopando</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The Turing Way Community<br/>
+    
+        &copy; Copyright 2020-2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

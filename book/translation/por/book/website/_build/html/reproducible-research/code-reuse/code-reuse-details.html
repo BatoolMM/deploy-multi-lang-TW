@@ -1,0 +1,1331 @@
+
+<!DOCTYPE html>
+
+<html lang="po">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recomendações detalhadas para reutilização de código &#8212; The Turing Way</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Integração contínua" href="../ci.html" />
+    <link rel="prev" title="Visão geral da reutilização do código" href="code-reuse-overview.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="po">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-167881009-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">The Turing Way</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../welcome.html">
+   Boas-vindas
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../reproducible-research.html">
+   Guia de Pesquisa Reprodutível
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../vcs.html">
+     Version Control
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-workflow.html">
+       General Workflow
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-git.html">
+       Getting Started with Git
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-git-commit.html">
+       Git Commit Command
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-git-compare.html">
+       Retrieving and Comparing Versions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-git-branches.html">
+       Git Branches
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-git-merge.html">
+       Merging Branches in Git
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-git-interactive.html">
+       Interactive, Visual Git
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-github.html">
+       Git Commands to Work on GitHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-git-summary.html">
+       Summary Table of Git Commands
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-data.html">
+       Version Control for Data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-personal-stories.html">
+       Personal Stories
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-checklist.html">
+       Checklist
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-resources.html">
+       Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../licensing.html">
+     Licensing
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../licensing/licensing-compatibility.html">
+       License Compatibililty
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../licensing/licensing-checklist.html">
+       Checklist
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../rdm.html">
+     Research Data Management
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-data.html">
+       Research Data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-fair.html">
+       The FAIR Principles and Practices
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-storage.html">
+       Data Storage and Organisation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-spreadsheets.html">
+       Data Organisation in Spreadsheets
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-toolkits.html">
+       Research Data Management Toolkits
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-stories.html">
+       Personal Impact Stories
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-checklist.html">
+       Checklist
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-resources.html">
+       Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../renv.html">
+     Reproducible Environments
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../renv/renv-options.html">
+       Capturing Computational Environments
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../renv/renv-package.html">
+       Package Management Systems
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../renv/renv-yaml.html">
+       YAML
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../renv/renv-resources.html">
+       Resources and Checklist
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../binderhub.html">
+     BinderHub
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../binderhub/binderhub-introduction.html">
+       Introduction to BinderHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../binderhub/binderhub-compute.html">
+       Compute Resources
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../binderhub/binderhub-build.html">
+       Build Your Own BinderHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../binderhub/binderhub-resources.html">
+       Resources for BinderHub
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../reviewing.html">
+     Code Reviewing Process
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../reviewing/reviewing-motivation.html">
+       Motivation for code reviewing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../reviewing/reviewing-recommend.html">
+       Recommendations for code reviewing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../reviewing/reviewing-workflow.html">
+       Code review workflow
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../reviewing/reviewing-resources.html">
+       Resources for code reviewing
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="../code-reuse.html">
+     Reusable Code
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="code-reuse-overview.html">
+       Overview of Code Reuse
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Detailed Recommendations for Code Reuse
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ci.html">
+     Continuous Integration (CI)
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ci/ci-options.html">
+       Intro to Continuous integration (CI)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ci/ci-building-gh-actions.html">
+       Building a Block of a GitHub actions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ci/ci-practices.html">
+       Best practices and recommendations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ci/ci-resources.html">
+       Checklist and Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../make.html">
+     Reproducible Research with Make
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../make/make-examples.html">
+       Learn "Make" by examples
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../make/make-debugging.html">
+       Debugging Makefiles
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../make/make-results.html">
+       Including numerical results and tables
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../make/make-resources.html">
+       Resources for "Make"
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../make/make-appendix.html">
+       Appendix
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../compendia.html">
+     Research Compendia
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../risk-assess.html">
+     Risk Assessment
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../risk-assess/risk-assess-impact.html">
+       Complexity and Impact of Risk Assessment
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../risk-assess/risk-assess-resources.html">
+       Summary of Risk Assessment
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../case-studies.html">
+     Case Studies
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../collaboration/collaboration.html">
+   Guia para colaboração
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/github-novice.html">
+     Getting Started With GitHub
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/github-novice/github-novice-firststeps.html">
+       First steps on GitHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/github-novice/github-novice-features.html">
+       Using more GitHub features
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/github-novice/github-novice-advanced.html">
+       Advanced GitHub features
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/maintain-review.html">
+     Maintainers and Reviewers on GitHub
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+    <label for="toctree-checkbox-15">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-maintenance.html">
+       Project Maintenance
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-permissions.html">
+       Ownership and Permissions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-review.html">
+       Reviewing Contributions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-merge.html">
+       Merging Contributions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-resources.html">
+       Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/new-community.html">
+     Managing a New Community and Team
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-guide.html">
+       Guide to Planning a Community
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-techissues.html">
+       Addressing Technical Issues
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-differences.html">
+       Valuing Diversity and Differences
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-teamwork.html">
+       Teamwork
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/leadership.html">
+     Leadership in Data Science
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+    <label for="toctree-checkbox-17">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/leadership/leadership-stories.html">
+       Personal Stories of Leadership
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/remote-collab.html">
+     Remote Collaboration
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+    <label for="toctree-checkbox-18">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-meetings.html">
+       Organising Remote Meetings
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-guidelines.html">
+       Guidelines for Remote Collaboration
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-tools.html">
+       Tools for Remote Collaboration
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-conferences.html">
+       Organising Remote Conferences
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-chairs.html">
+       Chairing Remote Events
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-participation.html">
+       Participating in Remote Events
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-management.html">
+       Managing Distributed Teams
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-informal.html">
+       Informal Coffee Chats
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-prosandcons.html">
+       Perceived Pros and Cons
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/shared-ownership.html">
+     Shared Ownership in Open Source Projects
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+    <label for="toctree-checkbox-19">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-projects.html">
+       Project Ownership
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-models.html">
+       Shared Ownership Models
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-challenges.html">
+       Challenges with Applying Ownership Models Retroactively
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-defaults.html">
+       Nudging for a Better Default
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../ethical-research/ethical-research.html">
+   Guia de Pesquisa Ética
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ethical-research/preclinical-research.html">
+     Ethical Decisions in Preclinical Research
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../ethical-research/law-policy.html">
+     Law, Policy and Human Rights in Ethics
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+    <label for="toctree-checkbox-21">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/law-policy/law-policy-ethics.html">
+       Ethics and law
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/law-policy/law-policy-rights.html">
+       Human rights
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/law-policy/law-policy-resources.html">
+       Further Recommendations
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../ethical-research/activism.html">
+     Activism for Researchers
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+    <label for="toctree-checkbox-22">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/activism/activism-unionisation.html">
+       Unionisation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/activism/activism-whistleblowing.html">
+       Whistleblowing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/activism/activism-robodebt.html">
+       Case study - Robodebt
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/activism/activism-case-study-google.html">
+       Case study - Google Workers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ethical-research/internal-policy.html">
+     Internal Policy Advocacy
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../community-handbook/community-handbook.html">
+   Manual da Comunidade
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+  <label for="toctree-checkbox-23">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/coc.html">
+     Code of Conduct
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+    <label for="toctree-checkbox-24">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-details.html">
+       Code of Conduct in Detail
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-reporting.html">
+       Incident Reporting Guideline
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-enforcement.html">
+       Enforcement Manual
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-acknowledgement.html">
+       Acknowledgements
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/contributing.html">
+     Contributing and Developing Chapters - Templates and Workflow
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
+    <label for="toctree-checkbox-25">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/contributing/contributing-templates.html">
+       Templates
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/acknowledgement.html">
+     Acknowledging Contributors
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/>
+    <label for="toctree-checkbox-26">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/acknowledgement/acknowledgement-members.html">
+       Community Members and Shared Ownership
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/acknowledgement/acknowledgement-record.html">
+       Record of Contributions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/coworking.html">
+     Community Coworking Calls
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/>
+    <label for="toctree-checkbox-27">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coworking/coworking-motivation.html">
+       Background, Motivations, and Techniques
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coworking/coworking-weekly.html">
+       Weekly Coworking Calls
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coworking/coworking-organisation.html">
+       Organising coworking calls
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Visit our <a href="https://github.com/alan-turing-institute/the-turing-way">GitHub Repository</a> <div>This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a></div>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/reproducible-research/code-reuse/code-reuse-details.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recomendacoes-repetidas">
+   Recomendações Repetidas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#certifique-se-de-que-voce-pode-encontra-lo-no-espaco">
+     1. Certifique-se de que você pode encontrá-lo (no espaço)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#certifique-se-de-que-voce-possa-encontra-lo-em-tempo">
+     2. Certifique-se de que você possa encontrá-lo (em tempo)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#certifique-se-de-que-voce-pode-executar-a-mesma-sequencia-de-operacoes">
+     3. Certifique-se de que você pode executar a mesma sequência de operações
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#certifique-se-de-que-seu-ambiente-e-sequencia-de-operacoes-sao-robustos-e-nenhum-humano-e-necessario-para-replicar-o-que-foi-feito">
+     4. Certifique-se de que seu ambiente e sequência de operações são robustos e nenhum humano é necessário para replicar o que foi feito
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#licenca-do-seu-codigo">
+     5. Licença do seu código
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#certifique-se-de-que-esta-acessivel">
+     6. Certifique-se de que está acessível
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#incluir-os-dados-necessarios">
+     7. Incluir os dados necessários
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recomendacoes-reexecutaveis">
+   Recomendações reexecutáveis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remova-bits-codificados-e-faca-o-codigo-modular">
+     1. Remova bits codificados e faça o código modular
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#teste-se-os-modulos-que-voce-criou-podem-ter-diferentes-tipos-de-dados-ou-parametros-de-entrada">
+     2. Teste se os módulos que você criou podem ter diferentes tipos de dados ou parâmetros de entrada
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transformar-os-modulos-em-um-pacote-caixa-de-ferramentas">
+     3. Transformar os módulos em um pacote/caixa de ferramentas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recomendacoes-portateis">
+   Recomendações Portáteis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#certifique-se-de-que-voce-pode-recriar-o-ambiente-onde-ele-viveu">
+     1. Certifique-se de que você pode recriar o ambiente onde ele viveu.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recomendacoes-extensiveis-e-modificaveis">
+   Recomendações extensíveis e modificáveis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#certifique-se-de-que-seu-codigo-e-legivel-por-humanos">
+     2. Certifique-se de que seu código é legível por humanos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#certifique-se-de-que-os-comentarios-estao-presentes">
+     3. Certifique-se de que os comentários estão presentes
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Recomendações detalhadas para reutilização de código</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recomendacoes-repetidas">
+   Recomendações Repetidas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#certifique-se-de-que-voce-pode-encontra-lo-no-espaco">
+     1. Certifique-se de que você pode encontrá-lo (no espaço)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#certifique-se-de-que-voce-possa-encontra-lo-em-tempo">
+     2. Certifique-se de que você possa encontrá-lo (em tempo)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#certifique-se-de-que-voce-pode-executar-a-mesma-sequencia-de-operacoes">
+     3. Certifique-se de que você pode executar a mesma sequência de operações
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#certifique-se-de-que-seu-ambiente-e-sequencia-de-operacoes-sao-robustos-e-nenhum-humano-e-necessario-para-replicar-o-que-foi-feito">
+     4. Certifique-se de que seu ambiente e sequência de operações são robustos e nenhum humano é necessário para replicar o que foi feito
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#licenca-do-seu-codigo">
+     5. Licença do seu código
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#certifique-se-de-que-esta-acessivel">
+     6. Certifique-se de que está acessível
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#incluir-os-dados-necessarios">
+     7. Incluir os dados necessários
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recomendacoes-reexecutaveis">
+   Recomendações reexecutáveis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remova-bits-codificados-e-faca-o-codigo-modular">
+     1. Remova bits codificados e faça o código modular
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#teste-se-os-modulos-que-voce-criou-podem-ter-diferentes-tipos-de-dados-ou-parametros-de-entrada">
+     2. Teste se os módulos que você criou podem ter diferentes tipos de dados ou parâmetros de entrada
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transformar-os-modulos-em-um-pacote-caixa-de-ferramentas">
+     3. Transformar os módulos em um pacote/caixa de ferramentas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recomendacoes-portateis">
+   Recomendações Portáteis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#certifique-se-de-que-voce-pode-recriar-o-ambiente-onde-ele-viveu">
+     1. Certifique-se de que você pode recriar o ambiente onde ele viveu.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recomendacoes-extensiveis-e-modificaveis">
+   Recomendações extensíveis e modificáveis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#certifique-se-de-que-seu-codigo-e-legivel-por-humanos">
+     2. Certifique-se de que seu código é legível por humanos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#certifique-se-de-que-os-comentarios-estao-presentes">
+     3. Certifique-se de que os comentários estão presentes
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="recomendacoes-detalhadas-para-reutilizacao-de-codigo">
+<span id="rr-code-reuse-details"></span><h1>Recomendações detalhadas para reutilização de código<a class="headerlink" href="#recomendacoes-detalhadas-para-reutilizacao-de-codigo" title="Permalink to this headline">¶</a></h1>
+<p>Certifique-se de que você (ou outra pessoa) pode reutilizar o seu código para fazer a mesma coisa exatamente. Esta seção contém uma lista de verificações simples de recomendações para tornar seu software mais reutilizável. Nesta secção há uma explicação mais aprofundada de cada uma destas recomendações, com indicações para outras partes relevantes deste guia.</p>
+<div class="section" id="recomendacoes-repetidas">
+<h2>Recomendações Repetidas<a class="headerlink" href="#recomendacoes-repetidas" title="Permalink to this headline">¶</a></h2>
+<p>Neste estágio, talvez você não precise sequer abrir o código e lê-lo, você só quer ter certeza de que pode voltar a executar todas as etapas necessárias e obter os mesmos resultados que você tiu.</p>
+<div class="section" id="certifique-se-de-que-voce-pode-encontra-lo-no-espaco">
+<h3>1. Certifique-se de que você pode encontrá-lo (no espaço)<a class="headerlink" href="#certifique-se-de-que-voce-pode-encontra-lo-no-espaco" title="Permalink to this headline">¶</a></h3>
+<p>Seu código deve ser armazenado publicamente e compartilhado com os colaboradores. Tem um identificador único e persistente, para que todos possam encontrá-lo e acessá-lo.</p>
+<p><strong>Veja também</strong>: <a class="reference internal" href="../vcs.html#rr-vcs"><span class="std std-ref">Controle de Versão</span></a></p>
+</div>
+<div class="section" id="certifique-se-de-que-voce-possa-encontra-lo-em-tempo">
+<h3>2. Certifique-se de que você possa encontrá-lo (em tempo)<a class="headerlink" href="#certifique-se-de-que-voce-possa-encontra-lo-em-tempo" title="Permalink to this headline">¶</a></h3>
+<p>Idealmente, a evolução temporal do código está documentada com controle de versão. Isso permite que você recupere uma versão específica do passado.</p>
+<p><strong>Veja também</strong>: <a class="reference internal" href="../vcs.html#rr-vcs"><span class="std std-ref">Controle de Versão</span></a></p>
+</div>
+<div class="section" id="certifique-se-de-que-voce-pode-executar-a-mesma-sequencia-de-operacoes">
+<h3>3. Certifique-se de que você pode executar a mesma sequência de operações<a class="headerlink" href="#certifique-se-de-que-voce-pode-executar-a-mesma-sequencia-de-operacoes" title="Permalink to this headline">¶</a></h3>
+<p>Muitas vezes, o ser humano que criou o ambiente é também aquele que escreveu o código e aquele que conhece a ordem exacta dos passos necessários para poder reexecutar o código e reproduzir os resultados. Isto poderia certamente ser cuidadosamente documentado para que outro humano o refaça.</p>
+<p><strong>Veja também</strong>: <a class="reference external" href="https://coderefinery.github.io/reproducible-research/">Lição do CodeRefinery sobre Pesquisa Reprodutiva</a></p>
+</div>
+<div class="section" id="certifique-se-de-que-seu-ambiente-e-sequencia-de-operacoes-sao-robustos-e-nenhum-humano-e-necessario-para-replicar-o-que-foi-feito">
+<h3>4. Certifique-se de que seu ambiente e sequência de operações são robustos e nenhum humano é necessário para replicar o que foi feito<a class="headerlink" href="#certifique-se-de-que-seu-ambiente-e-sequencia-de-operacoes-sao-robustos-e-nenhum-humano-e-necessario-para-replicar-o-que-foi-feito" title="Permalink to this headline">¶</a></h3>
+<p>Não querem depender do ser humano. Tendem a cometer erros, mesmo que não tenham más intenções. Então você quer que seu ambiente seja escrito e seja re-criado quando necessário, e deseja que sua sequência de operações seja executada por um script de pipeline que cola todas as sequências de passos. Um bom efeito lateral de escrever a sequência de operações é que isso geralmente pode servir como documentação das etapas.</p>
+<p><strong>Veja também</strong>: <a class="reference internal" href="../renv/renv-options.html#rr-renv-options"><span class="std std-ref">Capturando Ambientes Computacionais</span></a></p>
+</div>
+<div class="section" id="licenca-do-seu-codigo">
+<h3>5. Licença do seu código<a class="headerlink" href="#licenca-do-seu-codigo" title="Permalink to this headline">¶</a></h3>
+<p>Certifique-se de anexar uma licença ao seu código e especifique como você deseja ser citado quando as pessoas a reutilizarem. Considere usar uma licença permissiva que permita a reutilização. Além disso, você deve escolher uma licença que seja compatível com as licenças das bibliotecas ou pacotes que o seu software depende.</p>
+<p><strong>Veja também</strong>: <span class="xref std std-ref">rr-licensing-software</span>, <span class="xref std std-ref">rr-licensing-software-permissive</span>, <span class="xref std std-ref">rr-licensing-compatibilidade</span></p>
+</div>
+<div class="section" id="certifique-se-de-que-esta-acessivel">
+<h3>6. Certifique-se de que está acessível<a class="headerlink" href="#certifique-se-de-que-esta-acessivel" title="Permalink to this headline">¶</a></h3>
+<p>Certifique-se de especificar como você deseja ser citado quando as pessoas o reutilizarem.</p>
+<p><strong>Veja também</strong>: <span class="xref std std-ref">cm-citable-cite-software</span></p>
+</div>
+<div class="section" id="incluir-os-dados-necessarios">
+<h3>7. Incluir os dados necessários<a class="headerlink" href="#incluir-os-dados-necessarios" title="Permalink to this headline">¶</a></h3>
+<p>Se o software depende de qualquer tipo de dados, os dados devem estar disponíveis</p>
+<p><strong>Veja também</strong>: <a class="reference internal" href="../rdm/rdm-data.html#rr-rdm-data"><span class="std std-ref">Dados de pesquisa</span></a></p>
+</div>
+</div>
+<div class="section" id="recomendacoes-reexecutaveis">
+<h2>Recomendações reexecutáveis<a class="headerlink" href="#recomendacoes-reexecutaveis" title="Permalink to this headline">¶</a></h2>
+<p>Certifique-se de que você (ou outros) pode reutilizá-lo para fazer a coisa que você fez, mas com diferentes dados/parâmetros diferentes</p>
+<div class="section" id="remova-bits-codificados-e-faca-o-codigo-modular">
+<h3>1. Remova bits codificados e faça o código modular<a class="headerlink" href="#remova-bits-codificados-e-faca-o-codigo-modular" title="Permalink to this headline">¶</a></h3>
+<p>Você não quer ter detalhes específicos de seus dados ou parâmetros de análise codificados no código. Se algo pode se tornar uma função reutilizável, separe-a dos parâmetros codificados e transforme-a em algo (re)usável por conta própria. Torne os módulos puros: dado o mesmo input, uma função pura sempre retorna o mesmo valor. Em vez de especificar caminhos de arquivos dentro dos scripts, considere passá-los como argumentos de linha de comando para um script mais portátil e geral e reutilizável.</p>
+<p><strong>Veja também</strong>: <a class="reference external" href="https://cicero.xyz/v3/remark/0.14.0/github.com/coderefinery/modular-code-development/master/talk.md/#1">lição de desenvolvimento do CodeRefinery Modular Code</a></p>
+</div>
+<div class="section" id="teste-se-os-modulos-que-voce-criou-podem-ter-diferentes-tipos-de-dados-ou-parametros-de-entrada">
+<h3>2. Teste se os módulos que você criou podem ter diferentes tipos de dados ou parâmetros de entrada<a class="headerlink" href="#teste-se-os-modulos-que-voce-criou-podem-ter-diferentes-tipos-de-dados-ou-parametros-de-entrada" title="Permalink to this headline">¶</a></h3>
+<p>Você talvez não saiba ainda como seu código será reutilizado no futuro. mas você pode evitar como não deve ser usado se você puder testar quais parâmetros são permitidos.</p>
+<p><strong>Veja também</strong>: <a class="reference external" href="https://coderefinery.github.io/testing/motivation/">Aula com CodeRefinery sobre testes automatizados</a></p>
+</div>
+<div class="section" id="transformar-os-modulos-em-um-pacote-caixa-de-ferramentas">
+<h3>3. Transformar os módulos em um pacote/caixa de ferramentas<a class="headerlink" href="#transformar-os-modulos-em-um-pacote-caixa-de-ferramentas" title="Permalink to this headline">¶</a></h3>
+<p>Separe ainda mais as especificações do seu projeto com os bits que podem ser reutilizados em outros de seus projetos ou por outras pessoas.</p>
+<p><strong>Veja também</strong>: <span class="xref std std-ref">rr-renv package</span>, <a class="reference external" href="https://scicomp.aalto.fi/scicomp/packaging-software/">Packaging software</a>, <a class="reference external" href="https://aaltoscicomp.github.io/python-for-scicomp/packaging/">Pacotes de software em Python</a></p>
+</div>
+</div>
+<div class="section" id="recomendacoes-portateis">
+<h2>Recomendações Portáteis<a class="headerlink" href="#recomendacoes-portateis" title="Permalink to this headline">¶</a></h2>
+<p>A portabilidade refere-se à capacidade de transferir software para um novo ambiente. Isso pode se referir a uma máquina idêntica (mas não a mesma), mas também pode se referir a uma nova arquitectura de hardware, sistema operacional e coisas assim. Ambos são importantes para a reutilização de software.</p>
+<div class="section" id="certifique-se-de-que-voce-pode-recriar-o-ambiente-onde-ele-viveu">
+<h3>1. Certifique-se de que você pode recriar o ambiente onde ele viveu.<a class="headerlink" href="#certifique-se-de-que-voce-pode-recriar-o-ambiente-onde-ele-viveu" title="Permalink to this headline">¶</a></h3>
+<p>O ambiente é um instantâneo frágil no tempo que acompanha silenciosamente o código. Pode incluir o humano que operou o software, os passos que o humano fez para preparar os dados, o hardware, SO, bibliotecas, pacotes/caixas/dependências externas. Tudo isto pode ser cuidadosamente documentado para que outro ser humano refaça os mesmos passos.</p>
+<p><strong>Veja também</strong>: <a class="reference internal" href="../renv.html#rr-renv"><span class="std std-ref">Ambiente Reprodutível</span></a></p>
+</div>
+</div>
+<div class="section" id="recomendacoes-extensiveis-e-modificaveis">
+<h2>Recomendações extensíveis e modificáveis<a class="headerlink" href="#recomendacoes-extensiveis-e-modificaveis" title="Permalink to this headline">¶</a></h2>
+<p>Certifique-se de que outros podem usar o seu código para estendê-lo e melhorá-lo.</p>
+<div class="section" id="certifique-se-de-que-seu-codigo-e-legivel-por-humanos">
+<h3>2. Certifique-se de que seu código é legível por humanos<a class="headerlink" href="#certifique-se-de-que-seu-codigo-e-legivel-por-humanos" title="Permalink to this headline">¶</a></h3>
+<p>Geralmente, paga mais escrever códigos para outros seres humanos para que eles possam lê-lo (incluindo o seu próprio futuro). Um isolante crítico com nomes de variáveis obscuros não é mais rápido ou mais eficiente do que dividir um linho em várias etapas com nomes de variáveis legíveis que fazem sentido. Além disso, o recurso a convenções de codificação ajudará outros leitores.</p>
+<p><strong>Veja também</strong>: <span class="xref std std-ref">rr-code-style-and-formatting</span>, <span class="xref std std-ref">rr-code-quality-advantages</span></p>
+</div>
+<div class="section" id="certifique-se-de-que-os-comentarios-estao-presentes">
+<h3>3. Certifique-se de que os comentários estão presentes<a class="headerlink" href="#certifique-se-de-que-os-comentarios-estao-presentes" title="Permalink to this headline">¶</a></h3>
+<p>Escreva comentários antes de escrever o código real. Imagine que alguém poderia ler os comentários e pular todos os bits de código entre comentários e ter uma imagem completa do que está acontecendo como se lesse o código inteiro.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./reproducible-research/code-reuse"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="code-reuse-overview.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Visão geral da reutilização do código</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../ci.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Integração contínua</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The Turing Way Community<br/>
+    
+        &copy; Copyright 2020-2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

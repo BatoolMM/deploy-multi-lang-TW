@@ -1,0 +1,1101 @@
+
+<!DOCTYPE html>
+
+<html lang="po">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visão geral de Autoria Acadêmica &#8212; The Turing Way</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="po">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-167881009-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">The Turing Way</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../welcome.html">
+   Boas-vindas
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../reproducible-research/reproducible-research.html">
+   Guia de Pesquisa Reprodutível
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/vcs.html">
+     Version Control
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-workflow.html">
+       General Workflow
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-git.html">
+       Getting Started with Git
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-git-commit.html">
+       Git Commit Command
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-git-compare.html">
+       Retrieving and Comparing Versions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-git-branches.html">
+       Git Branches
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-git-merge.html">
+       Merging Branches in Git
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-git-interactive.html">
+       Interactive, Visual Git
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-github.html">
+       Git Commands to Work on GitHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-git-summary.html">
+       Summary Table of Git Commands
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-data.html">
+       Version Control for Data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-personal-stories.html">
+       Personal Stories
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-checklist.html">
+       Checklist
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/vcs/vcs-resources.html">
+       Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/licensing.html">
+     Licensing
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/licensing/licensing-compatibility.html">
+       License Compatibililty
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/licensing/licensing-checklist.html">
+       Checklist
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/rdm.html">
+     Research Data Management
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-data.html">
+       Research Data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-fair.html">
+       The FAIR Principles and Practices
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-storage.html">
+       Data Storage and Organisation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-spreadsheets.html">
+       Data Organisation in Spreadsheets
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-toolkits.html">
+       Research Data Management Toolkits
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-stories.html">
+       Personal Impact Stories
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-checklist.html">
+       Checklist
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/rdm/rdm-resources.html">
+       Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/renv.html">
+     Reproducible Environments
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/renv/renv-options.html">
+       Capturing Computational Environments
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/renv/renv-package.html">
+       Package Management Systems
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/renv/renv-yaml.html">
+       YAML
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/renv/renv-resources.html">
+       Resources and Checklist
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/binderhub.html">
+     BinderHub
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/binderhub/binderhub-introduction.html">
+       Introduction to BinderHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/binderhub/binderhub-compute.html">
+       Compute Resources
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/binderhub/binderhub-build.html">
+       Build Your Own BinderHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/binderhub/binderhub-resources.html">
+       Resources for BinderHub
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/reviewing.html">
+     Code Reviewing Process
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/reviewing/reviewing-motivation.html">
+       Motivation for code reviewing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/reviewing/reviewing-recommend.html">
+       Recommendations for code reviewing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/reviewing/reviewing-workflow.html">
+       Code review workflow
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/reviewing/reviewing-resources.html">
+       Resources for code reviewing
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/code-reuse.html">
+     Reusable Code
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/code-reuse/code-reuse-overview.html">
+       Overview of Code Reuse
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/code-reuse/code-reuse-details.html">
+       Detailed Recommendations for Code Reuse
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/ci.html">
+     Continuous Integration (CI)
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/ci/ci-options.html">
+       Intro to Continuous integration (CI)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/ci/ci-building-gh-actions.html">
+       Building a Block of a GitHub actions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/ci/ci-practices.html">
+       Best practices and recommendations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/ci/ci-resources.html">
+       Checklist and Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/make.html">
+     Reproducible Research with Make
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/make/make-examples.html">
+       Learn "Make" by examples
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/make/make-debugging.html">
+       Debugging Makefiles
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/make/make-results.html">
+       Including numerical results and tables
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/make/make-resources.html">
+       Resources for "Make"
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/make/make-appendix.html">
+       Appendix
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reproducible-research/compendia.html">
+     Research Compendia
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/risk-assess.html">
+     Risk Assessment
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/risk-assess/risk-assess-impact.html">
+       Complexity and Impact of Risk Assessment
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../reproducible-research/risk-assess/risk-assess-resources.html">
+       Summary of Risk Assessment
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../reproducible-research/case-studies.html">
+     Case Studies
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../collaboration/collaboration.html">
+   Guia para colaboração
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/github-novice.html">
+     Getting Started With GitHub
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/github-novice/github-novice-firststeps.html">
+       First steps on GitHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/github-novice/github-novice-features.html">
+       Using more GitHub features
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/github-novice/github-novice-advanced.html">
+       Advanced GitHub features
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/maintain-review.html">
+     Maintainers and Reviewers on GitHub
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+    <label for="toctree-checkbox-15">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-maintenance.html">
+       Project Maintenance
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-permissions.html">
+       Ownership and Permissions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-review.html">
+       Reviewing Contributions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-merge.html">
+       Merging Contributions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-resources.html">
+       Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/new-community.html">
+     Managing a New Community and Team
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-guide.html">
+       Guide to Planning a Community
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-techissues.html">
+       Addressing Technical Issues
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-differences.html">
+       Valuing Diversity and Differences
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-teamwork.html">
+       Teamwork
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/leadership.html">
+     Leadership in Data Science
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+    <label for="toctree-checkbox-17">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/leadership/leadership-stories.html">
+       Personal Stories of Leadership
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/remote-collab.html">
+     Remote Collaboration
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+    <label for="toctree-checkbox-18">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-meetings.html">
+       Organising Remote Meetings
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-guidelines.html">
+       Guidelines for Remote Collaboration
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-tools.html">
+       Tools for Remote Collaboration
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-conferences.html">
+       Organising Remote Conferences
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-chairs.html">
+       Chairing Remote Events
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-participation.html">
+       Participating in Remote Events
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-management.html">
+       Managing Distributed Teams
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-informal.html">
+       Informal Coffee Chats
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-prosandcons.html">
+       Perceived Pros and Cons
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/shared-ownership.html">
+     Shared Ownership in Open Source Projects
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+    <label for="toctree-checkbox-19">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-projects.html">
+       Project Ownership
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-models.html">
+       Shared Ownership Models
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-challenges.html">
+       Challenges with Applying Ownership Models Retroactively
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-defaults.html">
+       Nudging for a Better Default
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../ethical-research/ethical-research.html">
+   Guia de Pesquisa Ética
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ethical-research/preclinical-research.html">
+     Ethical Decisions in Preclinical Research
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../ethical-research/law-policy.html">
+     Law, Policy and Human Rights in Ethics
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+    <label for="toctree-checkbox-21">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/law-policy/law-policy-ethics.html">
+       Ethics and law
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/law-policy/law-policy-rights.html">
+       Human rights
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/law-policy/law-policy-resources.html">
+       Further Recommendations
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../ethical-research/activism.html">
+     Activism for Researchers
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+    <label for="toctree-checkbox-22">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/activism/activism-unionisation.html">
+       Unionisation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/activism/activism-whistleblowing.html">
+       Whistleblowing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/activism/activism-robodebt.html">
+       Case study - Robodebt
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/activism/activism-case-study-google.html">
+       Case study - Google Workers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ethical-research/internal-policy.html">
+     Internal Policy Advocacy
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../community-handbook/community-handbook.html">
+   Manual da Comunidade
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+  <label for="toctree-checkbox-23">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/coc.html">
+     Code of Conduct
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+    <label for="toctree-checkbox-24">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-details.html">
+       Code of Conduct in Detail
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-reporting.html">
+       Incident Reporting Guideline
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-enforcement.html">
+       Enforcement Manual
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-acknowledgement.html">
+       Acknowledgements
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/contributing.html">
+     Contributing and Developing Chapters - Templates and Workflow
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
+    <label for="toctree-checkbox-25">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/contributing/contributing-templates.html">
+       Templates
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/acknowledgement.html">
+     Acknowledging Contributors
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/>
+    <label for="toctree-checkbox-26">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/acknowledgement/acknowledgement-members.html">
+       Community Members and Shared Ownership
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/acknowledgement/acknowledgement-record.html">
+       Record of Contributions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/coworking.html">
+     Community Coworking Calls
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/>
+    <label for="toctree-checkbox-27">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coworking/coworking-motivation.html">
+       Background, Motivations, and Techniques
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coworking/coworking-weekly.html">
+       Weekly Coworking Calls
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coworking/coworking-organisation.html">
+       Organising coworking calls
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Visit our <a href="https://github.com/alan-turing-institute/the-turing-way">GitHub Repository</a> <div>This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a></div>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/communication/aa/overview.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quem-e-autor-ou-sao-realmente-contribuidores">
+   Quem é autor? ou são realmente contribuidores?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dominio-do-primeiro-autor">
+   Domínio do primeiro autor
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Visão geral de Autoria Acadêmica</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quem-e-autor-ou-sao-realmente-contribuidores">
+   Quem é autor? ou são realmente contribuidores?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dominio-do-primeiro-autor">
+   Domínio do primeiro autor
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <p>(comunicação-aa-visão geral)=</p>
+<div class="tex2jax_ignore mathjax_ignore section" id="visao-geral-de-autoria-academica">
+<h1>Visão geral de Autoria Acadêmica<a class="headerlink" href="#visao-geral-de-autoria-academica" title="Permalink to this headline">¶</a></h1>
+<p>Uma grande quantidade de valor é colocada na autoria acadêmica porque um artigo de jornal revisado por pares ainda é visto como a saída mais valiosa de um projeto de pesquisa. O número de artigos que um pesquisador acadêmico recebeu nome, e, em particular, se a pessoa foi nomeada como primeiro autor, tem um impacto significativo na sua carreira.</p>
+<p>Mas quem deve ser autor de um artigo? E será que podemos afastar-nos da ideia de o primeiro autor tirar o máximo crédito?</p>
+<p>(comunicação-aa-visão geral-who)=</p>
+<div class="section" id="quem-e-autor-ou-sao-realmente-contribuidores">
+<h2>Quem é autor? ou são realmente contribuidores?<a class="headerlink" href="#quem-e-autor-ou-sao-realmente-contribuidores" title="Permalink to this headline">¶</a></h2>
+<p>Atribuir nomes a uma publicação pode ser um negócio complicado. No entanto uma decisão importante que tem de ser tomada no início de um projecto é se os nomes dos artigos produzidos a partir do projecto vão ser autores ou contribuintes, ou uma combinação de ambos.</p>
+<p>A decisão pode estar essencialmente fora das nossas mãos, uma vez que os revistas e editores têm políticas específicas sobre os critérios de autoria. Portanto, se você quiser publicar em um diário específico, terá que aderir à política e fazer um acordo sobre isso no seu projeto.</p>
+<p>Uma definição geral de um autor é vista como a pessoa que é criadora da obra escrita (criadora das ideias e da escrita física) e há uma propriedade para o autor sobre o conteúdo do que é escrito.</p>
+<p>No entanto, a maior parte da investigação envolve uma equipa de pessoas para que isso aconteça. Quem decide, então, se estas contribuições são dignas de ser autorizadas ou se devem apenas ser reconhecidas?</p>
+<p>Portanto, Continua a ser comum dar autoria apenas àqueles que realmente participaram na escrita ou edição do artigo, bem como outros aspectos substanciais da investigação. Isso frequentemente exclui grandes contribuições para o projeto de técnicos, estudantes de pós-graduação e pós-graduação, e pessoas envolvidas na infra-estrutura do projecto, como engenheiros de software de pesquisa. Coloca também questões de ordem ética relativamente a quem atribui crédito pelo trabalho realizado num projecto.</p>
+<p>(comunicação-aa-visualização-primeiro)=</p>
+</div>
+<div class="section" id="dominio-do-primeiro-autor">
+<h2>Domínio do primeiro autor<a class="headerlink" href="#dominio-do-primeiro-autor" title="Permalink to this headline">¶</a></h2>
+<p>Ser o primeiro autor impacta a reputação e a visibilidade da pessoa devido a uma visão percebida de que esta pessoa faz a maior contribuição, índices de citação que, no passado, contaram apenas citações para o autor do primeiro nome, e citações em artigos acadêmicos sendo encurtados para o nome do primeiro autor com <em>et al</em> (Ref: Frandsen &amp; Nicolaisen 2010). O número de referências feitas por documentos e em que jornais são publicados são frequentemente critérios importantes para a obtenção de novos empregos. ser promovido e ganhar aplicativos de financiamento.</p>
+<p>A prática de o primeiro autor ocupar um lugar de destaque sobre outros tem também implicações sociais. Por exemplo, pode ser uma decisão difícil para um pesquisador alterar seu nome, devido ao casamento ou ao divórcio, uma vez que esta acção pode ter um impacto negativo na sua carreira de investigação.</p>
+<p>Links para discussões sobre o impacto de mudanças de nomes em academia:</p>
+<ul class="simple">
+<li><p>Artigo da Conversa - <a class="reference external" href="https://theconversation.com/how-three-scientists-navigated-the-personal-and-career-implications-of-a-name-change-with-marriage-114918">Como três cientistas navegaram pelas implicações pessoais e de carreira de uma mudança de nome com o casamento</a></p></li>
+<li><p><a class="reference external" href="https://www.reddit.com/r/AskAcademia/comments/2dfqho/married_women_in_academia_did_you_change_your/">Mulheres casadas na academia - você mudou seu nome?</a>.</p></li>
+<li><p>London School of Economics Impact of Social Sciences Blog - <a class="reference external" href="https://blogs.lse.ac.uk/impactofsocialsciences/2020/09/30/for-academic-publishing-to-be-trans-inclusive-authors-must-be-allowed-to-retroactively-change-their-names/">Para a publicação acadêmica ser inclusiva, autores devem ter permissão para alterar retroativamente seus nomes</a>.</p></li>
+</ul>
+<p>Não cabe a este capítulo argumentar contra esta cultura académica de citação concorrencial, mas há que notar que existem actualmente muitos tipos de resultados diferentes que podem ser atribuídos de formas diferentes. Por conseguinte, assistimos actualmente a uma mudança lenta na importância exclusiva dos artigos de jornal. Tais saídas podem incluir conjuntos de dados, códigos ou blogs que documentam um projeto de pesquisa e estes essencialmente têm tanto valor quanto um artigo de periódico em termos de comunicação e a reprodutibilidade da pesquisa.</p>
+<p>Aqui estão dois bons artigos sobre como precisamos nos afastar da cultura dos primeiros e últimos autores e reflectir resultados mais diversos:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.nature.com/articles/d41586-018-06779-2">Não mais do primeiro autor, nem mais do último autor de Gretchen Kisher</a></p></li>
+<li><p><a class="reference external" href="https://malvikasharan.github.io/blogs/dora-panel-open-science/">Desafios na avaliação das contribuições para a pesquisa reprodutível e ciência aberta pelo Malvika Sharan</a>.</p></li>
+</ul>
+<p>No entanto, as decisões relativas à autoria continuam a ser centrais na mente da maioria dos académicos e são também utilizadas como indicador do impacto de projectos. Por conseguinte, as decisões sobre a autoria têm de ser tomadas e as duas principais decisões a tomar são: quem deve obter a autoria no documento? e qual deve ser a ordem dos nomes?</p>
+<p>Contribuições para projetos de pesquisa e como estas se traduzem em autoria de um artigo de diário são abordadas de muitas maneiras diferentes, dependendo da disciplina em que o estudo se baseia, o local da publicação (qual diário ou editor é usado), a motivação dos colaboradores do projeto e o número de pessoas envolvidas no projeto. A ordem dos nomes baseia-se fortemente numa tradição específica de disciplina daquilo que é entendido por essa ordem, o que pode gerar tensão quando forem criadas novas colaborações de investigação.</p>
+<p>Existe uma tendência crescente para contrariar as ideias de autoria mais tradicionais; no número de autores e na sua encomenda, e essa autoria deve reflectir as contribuições de toda a equipa ou comunidade. Este modelo de autoria inclusivo é difícil de alcançar e deve ser planeado no início de qualquer projecto para que todas as contribuições sejam registadas.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./communication/aa"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The Turing Way Community<br/>
+    
+        &copy; Copyright 2020-2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

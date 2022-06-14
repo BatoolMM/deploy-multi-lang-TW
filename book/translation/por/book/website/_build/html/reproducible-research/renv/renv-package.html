@@ -1,0 +1,1292 @@
+
+<!DOCTYPE html>
+
+<html lang="po">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistemas de Gerenciamento de Pacotes &#8212; The Turing Way</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="YAML" href="renv-yaml.html" />
+    <link rel="prev" title="Capturando Ambientes Computacionais" href="renv-options.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="po">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-167881009-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">The Turing Way</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../welcome.html">
+   Boas-vindas
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../reproducible-research.html">
+   Guia de Pesquisa Reprodutível
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../vcs.html">
+     Version Control
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-workflow.html">
+       General Workflow
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-git.html">
+       Getting Started with Git
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-git-commit.html">
+       Git Commit Command
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-git-compare.html">
+       Retrieving and Comparing Versions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-git-branches.html">
+       Git Branches
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-git-merge.html">
+       Merging Branches in Git
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-git-interactive.html">
+       Interactive, Visual Git
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-github.html">
+       Git Commands to Work on GitHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-git-summary.html">
+       Summary Table of Git Commands
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-data.html">
+       Version Control for Data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-personal-stories.html">
+       Personal Stories
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-checklist.html">
+       Checklist
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../vcs/vcs-resources.html">
+       Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../licensing.html">
+     Licensing
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../licensing/licensing-compatibility.html">
+       License Compatibililty
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../licensing/licensing-checklist.html">
+       Checklist
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../rdm.html">
+     Research Data Management
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-data.html">
+       Research Data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-fair.html">
+       The FAIR Principles and Practices
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-storage.html">
+       Data Storage and Organisation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-spreadsheets.html">
+       Data Organisation in Spreadsheets
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-toolkits.html">
+       Research Data Management Toolkits
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-stories.html">
+       Personal Impact Stories
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-checklist.html">
+       Checklist
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../rdm/rdm-resources.html">
+       Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="../renv.html">
+     Reproducible Environments
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="renv-options.html">
+       Capturing Computational Environments
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Package Management Systems
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="renv-yaml.html">
+       YAML
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="renv-resources.html">
+       Resources and Checklist
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../binderhub.html">
+     BinderHub
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../binderhub/binderhub-introduction.html">
+       Introduction to BinderHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../binderhub/binderhub-compute.html">
+       Compute Resources
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../binderhub/binderhub-build.html">
+       Build Your Own BinderHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../binderhub/binderhub-resources.html">
+       Resources for BinderHub
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../reviewing.html">
+     Code Reviewing Process
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../reviewing/reviewing-motivation.html">
+       Motivation for code reviewing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../reviewing/reviewing-recommend.html">
+       Recommendations for code reviewing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../reviewing/reviewing-workflow.html">
+       Code review workflow
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../reviewing/reviewing-resources.html">
+       Resources for code reviewing
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../code-reuse.html">
+     Reusable Code
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code-reuse/code-reuse-overview.html">
+       Overview of Code Reuse
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../code-reuse/code-reuse-details.html">
+       Detailed Recommendations for Code Reuse
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ci.html">
+     Continuous Integration (CI)
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ci/ci-options.html">
+       Intro to Continuous integration (CI)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ci/ci-building-gh-actions.html">
+       Building a Block of a GitHub actions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ci/ci-practices.html">
+       Best practices and recommendations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ci/ci-resources.html">
+       Checklist and Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../make.html">
+     Reproducible Research with Make
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../make/make-examples.html">
+       Learn "Make" by examples
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../make/make-debugging.html">
+       Debugging Makefiles
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../make/make-results.html">
+       Including numerical results and tables
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../make/make-resources.html">
+       Resources for "Make"
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../make/make-appendix.html">
+       Appendix
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../compendia.html">
+     Research Compendia
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../risk-assess.html">
+     Risk Assessment
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../risk-assess/risk-assess-impact.html">
+       Complexity and Impact of Risk Assessment
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../risk-assess/risk-assess-resources.html">
+       Summary of Risk Assessment
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../case-studies.html">
+     Case Studies
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../collaboration/collaboration.html">
+   Guia para colaboração
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/github-novice.html">
+     Getting Started With GitHub
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/github-novice/github-novice-firststeps.html">
+       First steps on GitHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/github-novice/github-novice-features.html">
+       Using more GitHub features
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/github-novice/github-novice-advanced.html">
+       Advanced GitHub features
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/maintain-review.html">
+     Maintainers and Reviewers on GitHub
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+    <label for="toctree-checkbox-15">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-maintenance.html">
+       Project Maintenance
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-permissions.html">
+       Ownership and Permissions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-review.html">
+       Reviewing Contributions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-merge.html">
+       Merging Contributions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/maintain-review/maintain-review-resources.html">
+       Resources
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/new-community.html">
+     Managing a New Community and Team
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-guide.html">
+       Guide to Planning a Community
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-techissues.html">
+       Addressing Technical Issues
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-differences.html">
+       Valuing Diversity and Differences
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/new-community/new-community-teamwork.html">
+       Teamwork
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/leadership.html">
+     Leadership in Data Science
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+    <label for="toctree-checkbox-17">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/leadership/leadership-stories.html">
+       Personal Stories of Leadership
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/remote-collab.html">
+     Remote Collaboration
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+    <label for="toctree-checkbox-18">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-meetings.html">
+       Organising Remote Meetings
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-guidelines.html">
+       Guidelines for Remote Collaboration
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-tools.html">
+       Tools for Remote Collaboration
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-conferences.html">
+       Organising Remote Conferences
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-chairs.html">
+       Chairing Remote Events
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-participation.html">
+       Participating in Remote Events
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-management.html">
+       Managing Distributed Teams
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-informal.html">
+       Informal Coffee Chats
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/remote-collab/remote-collab-prosandcons.html">
+       Perceived Pros and Cons
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../collaboration/shared-ownership.html">
+     Shared Ownership in Open Source Projects
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+    <label for="toctree-checkbox-19">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-projects.html">
+       Project Ownership
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-models.html">
+       Shared Ownership Models
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-challenges.html">
+       Challenges with Applying Ownership Models Retroactively
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../collaboration/shared-ownership/shared-ownership-defaults.html">
+       Nudging for a Better Default
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../ethical-research/ethical-research.html">
+   Guia de Pesquisa Ética
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ethical-research/preclinical-research.html">
+     Ethical Decisions in Preclinical Research
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../ethical-research/law-policy.html">
+     Law, Policy and Human Rights in Ethics
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+    <label for="toctree-checkbox-21">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/law-policy/law-policy-ethics.html">
+       Ethics and law
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/law-policy/law-policy-rights.html">
+       Human rights
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/law-policy/law-policy-resources.html">
+       Further Recommendations
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../ethical-research/activism.html">
+     Activism for Researchers
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+    <label for="toctree-checkbox-22">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/activism/activism-unionisation.html">
+       Unionisation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/activism/activism-whistleblowing.html">
+       Whistleblowing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/activism/activism-robodebt.html">
+       Case study - Robodebt
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ethical-research/activism/activism-case-study-google.html">
+       Case study - Google Workers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ethical-research/internal-policy.html">
+     Internal Policy Advocacy
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../community-handbook/community-handbook.html">
+   Manual da Comunidade
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+  <label for="toctree-checkbox-23">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/coc.html">
+     Code of Conduct
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+    <label for="toctree-checkbox-24">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-details.html">
+       Code of Conduct in Detail
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-reporting.html">
+       Incident Reporting Guideline
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-enforcement.html">
+       Enforcement Manual
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coc/coc-acknowledgement.html">
+       Acknowledgements
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/contributing.html">
+     Contributing and Developing Chapters - Templates and Workflow
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
+    <label for="toctree-checkbox-25">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/contributing/contributing-templates.html">
+       Templates
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/acknowledgement.html">
+     Acknowledging Contributors
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/>
+    <label for="toctree-checkbox-26">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/acknowledgement/acknowledgement-members.html">
+       Community Members and Shared Ownership
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/acknowledgement/acknowledgement-record.html">
+       Record of Contributions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../community-handbook/coworking.html">
+     Community Coworking Calls
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/>
+    <label for="toctree-checkbox-27">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coworking/coworking-motivation.html">
+       Background, Motivations, and Techniques
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coworking/coworking-weekly.html">
+       Weekly Coworking Calls
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../community-handbook/coworking/coworking-organisation.html">
+       Organising coworking calls
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Visit our <a href="https://github.com/alan-turing-institute/the-turing-way">GitHub Repository</a> <div>This book is powered by <a href="https://jupyterbook.org">Jupyter Book</a></div>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/reproducible-research/renv/renv-package.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#o-que-conda-faz">
+   O que Conda faz?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instalando-conda">
+   Instalando Conda
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#criacao-e-uso-de-ambientes">
+   Criação e Uso de Ambientes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#desativando-e-excluindo-ambientes">
+   Desativando e excluindo ambientes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instalar-e-remover-pacotes-dentro-de-um-ambiente">
+   Instalar e remover pacotes dentro de um ambiente
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exportando-e-reproduzindo-ambientes-computacionais">
+   Exportando e Reproduzindo Ambientes Computacionais
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Sistemas de Gerenciamento de Pacotes</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#o-que-conda-faz">
+   O que Conda faz?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instalando-conda">
+   Instalando Conda
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#criacao-e-uso-de-ambientes">
+   Criação e Uso de Ambientes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#desativando-e-excluindo-ambientes">
+   Desativando e excluindo ambientes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instalar-e-remover-pacotes-dentro-de-um-ambiente">
+   Instalar e remover pacotes dentro de um ambiente
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exportando-e-reproduzindo-ambientes-computacionais">
+   Exportando e Reproduzindo Ambientes Computacionais
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="sistemas-de-gerenciamento-de-pacotes">
+<span id="rr-renv-pacote"></span><h1>Sistemas de Gerenciamento de Pacotes<a class="headerlink" href="#sistemas-de-gerenciamento-de-pacotes" title="Permalink to this headline">¶</a></h1>
+<p>Gerenciadores de pacotes instalam e controlam os diferentes pacotes de software (e suas versões) que você usa em um ambiente. Há várias opções para escolher, por exemplo, Yum, Zypper, dpkg, e Nix (que serão mencionados na seção <span class="xref std std-ref">rr-renv-binder</span>). Vamos focar no <a class="reference external" href="https://conda.io/en/latest/">Conda</a>, que tem várias funcionalidades úteis.</p>
+<div class="section" id="o-que-conda-faz">
+<span id="rr-renv-pacote-conda"></span><h2>O que Conda faz?<a class="headerlink" href="#o-que-conda-faz" title="Permalink to this headline">¶</a></h2>
+<p>Conda permite que os usuários criem qualquer número de ambientes inteiramente separados, e rapidamente e alternam entre eles. Por exemplo, digamos que um pesquisador tem um projeto, <em>Projeto Um</em>, que tem seu próprio ambiente, definido pela Conda, é composto do seguinte conjunto de pacotes:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Nome do Pacote</strong></p></th>
+<th class="head"><p><strong>Versão</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Pacote</span> <span class="pre">A</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1.5.2</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Pacote</span> <span class="pre">B</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">2.1.10</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Pacote</span> <span class="pre">C</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0.7.9</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Mais tarde, o pesquisador começa o <em>Projeto Dois</em> em seu próprio ambiente, com os seguintes pacotes:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><em>Nome do Pacote</em></p></th>
+<th class="head"><p><em>Versão</em></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Pacote</span> <span class="pre">B</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">2.1.10</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Pacote</span> <span class="pre">C</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1.2.4</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Pacote</span> <span class="pre">D</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1.5.2</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Pacote</span> <span class="pre">E</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">3.7.1</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Note aqui que a versão do <code class="docutils literal notranslate"><span class="pre">pacote</span> <span class="pre">C</span></code> usada no <em>Projeto Dois</em> foi atualizada a partir da versão utilizada no <em>Projeto Um</em>. Se esses ambientes de projeto não fossem separados, o pesquisador teria a escolha de:</p>
+<ul class="simple">
+<li><p>A) Usando a versão mais antiga do <code class="docutils literal notranslate"><span class="pre">pacote</span> <span class="pre">C</span></code> para sempre e não se beneficiando com atualizações e correções de bugs em versões posteriores.</p></li>
+<li><p>B) Instalando a versão atualizada do pacote e esperando que ele não impacte o <em>Projeto Um</em>.</p></li>
+<li><p>C) Instalando a versão atualizada do pacote para uso no <em>Projeto 2</em>, depois desinstalá-lo e reinstalar o antigo sempre que eles precisarem fazer trabalho no <em>Projeto Um</em>. Isso seria extremamente aborrecido e arrisca-se a ser esquecido.</p></li>
+</ul>
+<p>Todas estas opções são extremamente fracas, daí a utilidade da Conda para criar ambientes distintos que são facilmente intercambiáveis.</p>
+<p>Conda também pode ser usada para capturar e exportar ambientes computacionais facilmente. Ele também pode ir na outra direção; pode gerar ambientes computacionais a partir de arquivos de configuração que podem ser usados para recriar o ambiente de outra pessoa.</p>
+<p>Outro benefício da Conda é que ela oferece muito maior flexibilidade aos usuários que não têm privilégios de administração nas máquinas em que estão trabalhando (como é muito comum quando trabalham com instalações de computação de alto desempenho). Sem a Conda, é tipicamente desafiador instalar o software exigido em tais máquinas. No entanto, porque Conda cria e altera <em>novos</em> ambientes, ao invés de fazer alterações no ambiente geral de uma máquina, os privilégios de administrador não são necessários.</p>
+<p>Finalmente, embora o Conda seja, até certo ponto, centrado em Python, também está bem integrado para uso com outras línguas. Por exemplo, a versão base do Conda inclui a biblioteca padrão de C++.</p>
+</div>
+<div class="section" id="instalando-conda">
+<span id="rr-renv-pacote-instalando"></span><h2>Instalando Conda<a class="headerlink" href="#instalando-conda" title="Permalink to this headline">¶</a></h2>
+<p>Note que estas instruções de instalação são direcionadas para sistemas Linux. Instruções para instalar o Conda no Windows ou Mac system podem ser encontradas <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/">aqui</a>.</p>
+<p>Vá para <a class="reference external" href="https://repo.continuum.io/miniconda/">https://repo.continuum.io/miniconda/</a> e baixe o último instalador do Miniconda 3 para o seu sistema (32 bits ou 64 bits). Será um nome como <code class="docutils literal notranslate"><span class="pre">miniconda_version_number.sh</span></code>. Execute o instalador usando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">Miniconda_versão_número</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>Você pode verificar se o Conda foi instalado com sucesso digitando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>que deve retornar um número de versão.</p>
+</div>
+<div class="section" id="criacao-e-uso-de-ambientes">
+<span id="rr-renv-pacote-usando"></span><h2>Criação e Uso de Ambientes<a class="headerlink" href="#criacao-e-uso-de-ambientes" title="Permalink to this headline">¶</a></h2>
+<p>Conda instala automaticamente um ambiente de base com alguns pacotes de software comumente usados. É possível trabalhar neste ambiente de base; no entanto, é uma boa prática criar um novo ambiente para todos os projectos que se inicia.</p>
+<p>Para criar um ambiente, utilize <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">--name</span> <span class="pre">your_project_env_name</span></code> seguido por uma lista de pacotes a incluir. Para incluir os pacotes <code class="docutils literal notranslate"><span class="pre">scipy</span></code> e <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> , adicione-os ao final do comando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">criar</span> <span class="n">conda</span> <span class="o">--</span><span class="n">name</span> <span class="n">Projetot_One</span> <span class="n">scipy</span> <span class="n">matplotlib</span>
+</pre></div>
+</div>
+<p>Pode especificar as versões de certos (ou todos) pacotes usando <code class="docutils literal notranslate"><span class="pre">=package_number</span></code> após o nome. Por exemplo, para especificar <code class="docutils literal notranslate"><span class="pre">scipy</span> <span class="pre">1.2.1</span></code> no ambiente acima:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">criar</span> <span class="n">conda</span> <span class="o">--</span><span class="n">name</span> <span class="n">Projetot_One</span> <span class="n">scipy</span><span class="o">=</span><span class="mf">1.2.1</span> <span class="s2">&quot;Título&quot;</span>
+</pre></div>
+</div>
+<p>Ao criar ambientes, você também pode especificar versões de idiomas para instalar. Por exemplo, para usar o <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3.7.1</span></code> no ambiente <em>Project_One</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">Project_One</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.7.1</span> <span class="n">scipy</span><span class="o">=</span><span class="mf">1.2.1</span> <span class="n">matplotlib</span>
+</pre></div>
+</div>
+<p>Agora que um ambiente foi criado, é hora de ativar (começar a usar) através de <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">environment_name</span></code>. Portanto, neste exemplo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">ativar</span> <span class="n">Projeto_One</span>
+</pre></div>
+</div>
+<p>Note que você pode precisar usar a fonte `` em vez de <code class="docutils literal notranslate"><span class="pre">conda</span></code> se você estiver usando uma versão antiga do Conda.</p>
+<p>Uma vez que um ambiente é ativado, você deverá ver o nome do ambiente antes de cada prompt no seu terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(Project_One) $ python --version Python 3.7.1
+</pre></div>
+</div>
+</div>
+<div class="section" id="desativando-e-excluindo-ambientes">
+<span id="rr-renv-pacote-excluindo"></span><h2>Desativando e excluindo ambientes<a class="headerlink" href="#desativando-e-excluindo-ambientes" title="Permalink to this headline">¶</a></h2>
+<p>Você pode desativar (sair da) um ambiente usando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;conda&quot;</span> <span class="n">desativar</span>
+</pre></div>
+</div>
+<p>e remover (excluir) um ambiente como mostrado aqui:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">remover</span> <span class="n">conda</span> <span class="n">env</span> <span class="o">--</span><span class="n">name</span> <span class="n">Projeto_One</span>
+</pre></div>
+</div>
+<p>Para verificar se um ambiente foi removido com sucesso, você pode ver uma lista de todos os ambientes de Conda no sistema utilizando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="n">env</span> <span class="n">conda</span>
+</pre></div>
+</div>
+<p>No entanto, a exclusão de um ambiente pode não apagar os arquivos do pacote que foram associados a ele. Isto pode levar a que muita memória seja desperdiçada em pacotes que já não são necessários. Pacotes que não são mais referenciados por nenhum ambiente podem ser excluídos usando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;conda limpo&quot;</span> <span class="o">-</span><span class="n">pts</span>
+</pre></div>
+</div>
+<p>Como alternativa, você pode excluir um ambiente (como <em>Project_One</em>), juntamente com seus pacotes associados via:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;conda&#39;</span> <span class="n">remover</span> <span class="o">--</span><span class="n">name</span> <span class="n">Projeto_One</span> <span class="o">--</span><span class="n">todos</span>
+</pre></div>
+</div>
+<p>(rr-renv-pacote-remoção)=</p>
+</div>
+<div class="section" id="instalar-e-remover-pacotes-dentro-de-um-ambiente">
+<h2>Instalar e remover pacotes dentro de um ambiente<a class="headerlink" href="#instalar-e-remover-pacotes-dentro-de-um-ambiente" title="Permalink to this headline">¶</a></h2>
+<p>Dentro de um ambiente, você pode instalar mais pacotes usando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">instalar</span> <span class="n">o</span> <span class="n">package_name</span> <span class="n">conda</span>
+</pre></div>
+</div>
+<p>Da mesma forma, você pode removê-los via:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apagar</span> <span class="n">nome</span> <span class="n">do</span> <span class="n">pacote</span>
+</pre></div>
+</div>
+<p>Esta é a melhor maneira de instalar pacotes de dentro do Conda, pois também instalará uma versão adaptada à Conda do pacote. No entanto, é possível utilizar outros métodos se uma versão específica do pacote não estiver disponível. Por exemplo, <code class="docutils literal notranslate"><span class="pre">pip</span></code> é comumente usado para instalar pacotes de Python. Então, um comando como:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">scipy</span>
+</pre></div>
+</div>
+<p>irá instalar o pacote <code class="docutils literal notranslate"><span class="pre">scipy</span></code> explicitamente - desde que o <code class="docutils literal notranslate"><span class="pre">pip</span></code> seja instalado dentro do ambiente de Conda atualmente ativo. Infelizmente, quando Conda e <code class="docutils literal notranslate"><span class="pre">pip</span></code> são usados juntos para criar um ambiente, pode conduzir a um estado que pode ser difícil de reproduzir. Especificamente, executar Conda depois do <code class="docutils literal notranslate"><span class="pre">pip</span></code> pode potencialmente substituir ou quebrar pacotes instalados via <code class="docutils literal notranslate"><span class="pre">pip</span></code>. Uma maneira de evitar isso é instalando o maior número possível de requisitos no Conda, e então usando o pip. Uma maneira de evitar isso é instalando o maior número possível de requisitos no Conda, e então usando o pip. Informações detalhadas podem ser lidas no post, <a class="reference external" href="https://www.anaconda.com/using-pip-in-a-conda-environment/">Usando o Pip em um ambiente de Conda</a>.</p>
+<p>Embora os pacotes do Python tenham sido usados em muitos dos exemplos dados aqui, os pacotes do Conda não precisam ser pacotes do Python. Por exemplo, aqui o idioma base R está instalado juntamente com o pacote R <code class="docutils literal notranslate"><span class="pre">r-yaml</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">criar</span> <span class="n">conda</span> <span class="o">--</span><span class="n">name</span> <span class="n">Projetot_One</span> <span class="n">r</span><span class="o">-</span><span class="n">yaml</span>
+</pre></div>
+</div>
+<p>Para ver todos os pacotes instalados no ambiente atual, use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="n">de</span> <span class="n">conda</span>
+</pre></div>
+</div>
+<p>Para verificar se um pacote em particular está instalado, por exemplo, a <code class="docutils literal notranslate"><span class="pre">scipy</span></code> neste caso:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="nb">list</span> <span class="n">scipy</span>
+</pre></div>
+</div>
+<p>Um canal de Conda é de onde ele baixou um pacote. Canais comuns incluem <code class="docutils literal notranslate"><span class="pre">Anaconda</span></code> (uma empresa que fornece o canal de pacote de conda padronizado), e <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> (uma tentativa de embalagem conduzida pela comunidade). Você pode instalar explicitamente um pacote a partir de um determinado canal, especificando-o como:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">channel_name</span> <span class="n">package_name</span>
+</pre></div>
+</div>
+<p>(rr-renv-pacote-exportação)=</p>
+</div>
+<div class="section" id="exportando-e-reproduzindo-ambientes-computacionais">
+<h2>Exportando e Reproduzindo Ambientes Computacionais<a class="headerlink" href="#exportando-e-reproduzindo-ambientes-computacionais" title="Permalink to this headline">¶</a></h2>
+<p>Ambientes de Conda podem ser exportados facilmente para arquivos legíveis por humanos no formato YAML. Arquivos YAML são discutidos com mais detalhes <a class="reference internal" href="renv-yaml.html#rr-renv-yaml"><span class="std std-ref">mais tarde</span></a> neste capítulo.</p>
+<p>Para exportar um ambiente conda para um arquivo chamado <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code>, ative o ambiente e então execute:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exportação</span> <span class="n">de</span> <span class="n">env</span> <span class="n">conda</span> <span class="o">&gt;</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+<p>Da mesma forma, ambientes de Conda podem ser criados a partir de arquivos YAML via:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">criar</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+<p>Isso permite que pesquisadores se reproduzam rapidamente em ambientes computacionais uns dos outros. Note que a lista de pacotes não é apenas aqueles explicitamente instalados. Ele pode incluir pacotes de dependências específicas para Sistema Operacional para que os arquivos de ambiente possam exigir alguma edição para ser portátil para diferentes sistemas operacionais.</p>
+<p>Os ambientes também podem ser clonados. Isso pode ser desejável, por exemplo, se um investigador iniciar um novo projecto e quiser criar um novo ambiente para trabalhar nele; o ambiente do novo projeto (pelo menos inicialmente) pode exigir os mesmos pacotes do ambiente de um projeto anterior.</p>
+<p>Por exemplo, para clonar o ambiente <em>Project_One</em> e dar a este novo ambiente o nome <em>Project_Two</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">criar</span> <span class="n">conda</span> <span class="o">--</span><span class="n">name</span> <span class="n">Projeto_Dois</span> <span class="o">--</span><span class="n">clonar</span> <span class="n">Projeto_Um</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./reproducible-research/renv"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="renv-options.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Capturando Ambientes Computacionais</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="renv-yaml.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">YAML</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The Turing Way Community<br/>
+    
+        &copy; Copyright 2020-2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
