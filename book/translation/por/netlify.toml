@@ -1,7 +1,7 @@
 [build]
-  base = "por/book/website"
+  base = "book/translation/por/book/website"
   command = "pip install -r requirements.txt && jupyter-book build ."
-  publish = "por/book/website/_build/html"
+  publish = "book/translation/por/book/website/_build/html"
 
 
 [[redirects]]
